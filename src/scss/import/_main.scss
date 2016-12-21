@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+/*_main.scss */
+body.main {
+	@include bottom_height(14px);
+}
+
+//main content
+body.main .select_cinemas_wrap {
+	border-bottom: 1px solid #c7c9cf;
+
+	.title {
+		.link {
+			@extend %title_type;
+
+			@include ellipsis;
+			position: relative;
+		}
+
+		.icon_arr {
+			@include sp_icon($arr_right_01);
+
+			position: absolute;
+			top: 17px;
+			right: 14px;
+			display: inline-block;
+		}
+	}
+	.list {
+		background-color:#f0f1f3;
+		padding: 8px 0;
+
+		.item {
+			display: block;
+			font-weight: bold;
+		}
+		.link {
+			@include ellipsis;
+
+			display: block;
+			padding: 7px 14px 6px;
+		}
+		.link:before {
+			@include sp_icon($main_boomark_on);
+
+			display: inline-block;
+			vertical-align: top;
+			margin: -2px 10px 0 0;
+			content: '';
+		}
+	}
+}
+
+
+body.main .movies_wrap {
+	position: relative;
+
+	.title_wrap {
+		.title {
+			@extend %title_type;
+		}
+		.select_wrap {
+			position: absolute;
+			right: 14px;
+			top: 12px;
+		    height: 26px;
+		    width: 100px;
+		}
+		.select_wrap:before {
+			@include sp_icon($arr_down_01);
+
+			position: absolute;
+		    top: 12px;
+		    right: 0;
+		    content: '';
+		}		
+	    .label {
+	    	position: absolute;
+	    	width: 85px;
+	    	text-align: right;
+		    padding: 5px 0;
+			color: #858585;
+	    }
+		.select {
+			width: 100%;
+			height: auto;
+			line-height: normal;
+			font-family: inherit;
+			padding: 6px 5px;
+			border: 0;
+			opacity: 0;
+			-webkit-appearance: none; 
+			-moz-appearance: none;
+			appearance: none;
+		}
+	}
+
+	.list {
+		min-width: 292px;
+		overflow: hidden;
+		padding: 0 14px;
+
+		@include clearfix;
+
+		.item {
+			float: left;
+			width: 50%;
+		}
+
+		.item_inner {
+			line-height: 0;
+			padding: 5px;
+			border: 1px solid #c7c9cf;
+		}
+
+		.item:nth-child(odd) .item_inner {
+			margin-right: 6px;
+		}	
+		.item:nth-child(even) .item_inner {
+			margin-left: 6px;
+		}		
+		.item:nth-child(1n+3) {
+			margin-top: 12px;
+		}
+		.item .link {
+			display: block;
+		}
+		.item .link img {
+			width: 100%;
+			height: auto;
+		}
+		.movie_title .exp {
+			@include ellipsisMulti(2);
+
+			margin-top: 8px;			
+			font-size: 9px;
+			height: 21px;
+ 			line-height: 11px;
+			font-weight: bold;
+			text-align: left;
+		}
+		.movie_title .day {
+			@include ellipsis;
+
+			display: block;
+			margin-top: 7px;
+			font-size: 8px;
+			height: 13px;
+ 			line-height: 11px;
+			font-weight: bold;
+			text-align: left;
+			color: #858585;
+		}
+		.movie_title .day.now {
+			color: #f03f3c;
+		}
+		.btn_wrap {
+			@extend %btn_type;
+			@include clearfix;
+		}
+		.btn_wrap .btn_inner {
+			float: left;
+			width: 50%;
+			height: 27px;
+			line-height: 27px;				
+		}
+		.btn_wrap .link.share {
+			margin: 0 2px 0 0;
+			background-color:#00c43d;
+		}
+		.btn_wrap .link.buy {
+			margin: 0 0 0 2px;
+			background-color:#464c69;
+		}
+	}
+}
+
+
+body.main .my_ticket {
+	@include sp_icon($my_ticket);
+
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+
+    .ico_new {
+		@include sp_icon($my_ticket_new);
+
+		position: relative;
+		left: 55px;
+		top: 5px;
+    }
+}
+

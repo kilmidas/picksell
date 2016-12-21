@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/*_warning.scss */
+
+//warning content
+body.warning .center_wrap {
+	padding: 83px 0;
+	text-align: center;
+	color: #858585;
+
+	.ico_mark {
+		display: inline-block;
+		
+		@include sp_icon($not_availablel_mark);
+	}
+	.title {
+		font-size: 17px;
+		line-height: 15px;
+		margin-top: 19px;
+	}
+	.exp {
+		font-size: 13px;
+		line-height: 18px;
+		margin-top: 15px;
+	}
+}
+
+body.warning .btn_wrap.bottom {
+	@extend %btn_type_bottom;
+
+	.link.close {
+		background-color:#464c69;
+	}
+}

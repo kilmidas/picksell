@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/*_cineplex.scss */
+
+//common
+@import 'common/variables';
+@import "common/mixin";
+@import 'common/base';
+@import 'common/placeholders';
+
+
+//sprite
+@import "lib/spritesmith/sprite_mixins";
+@import "lib/spritesmith/sp_icon";
+
+//main
+@import "import/main";
+@import "import/cinema";
+@import "import/showtime";
+@import "import/payment";
+@import "import/complete";
+@import "import/warning";
+@import "import/movie_details";
+@import "import/myticket";

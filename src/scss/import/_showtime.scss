@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/*_showtime.scss */
+body.showtime {
+	@include bottom_height(18px);
+}
+//showtime content
+body.showtime .title_wrap {
+
+	.title {
+		position: relative;
+
+		@include clearfix;
+
+		.txt {
+			@extend %title_type;
+
+			display: block;
+			padding-right: 0;
+			overflow: hidden;
+			word-wrap: break-word;
+		}
+		.icon_wrap {
+			float: right;
+			display: block;
+			padding: 16px 14px 15px 15px;
+		}
+		.icon_arr {
+			@include sp_icon($drawer_menu);
+
+			display: block;
+		}
+	}
+}
+
+body.showtime .week_wrap {
+	border-top: 1px solid #c7c9cf;
+	background-color: #464c69;
+
+	.title {
+		padding-top: 10px;
+		font-size: 13px;
+		line-height: 15px;
+		color: #fff;
+		text-align: center;
+		letter-spacing: 1px;
+	}
+	.days_list_wrap {
+
+		ul {
+			padding: 0 10px;
+
+			@include clearfix;
+		}
+		.item {
+			float: left;
+			width: 14.285%;
+		}
+		.item:last-child {
+			width: 14.29%;
+		}
+		.item .link {
+			display: block;
+			padding: 10px 4px;
+			font-weight: bold;
+			text-align: center;			
+			color: #787c8e;
+		}
+		.item .link .day_txt {
+			display: block;
+			font-size: 12px;
+			text-indent: 1px;	
+			
+		}
+		.item .link .day_num {
+			display: inline-block;
+			margin-top: 3px;
+			width: 34px;
+			height: 34px;
+			font-size: 14px;
+			line-height: 34px;
+			text-indent: -1px;		
+			vertical-align: middle;
+		}
+		.item.on .link .day_txt {
+			color: #fff;
+		}
+		.item.on .link .day_num {
+			color: #fff;
+		}
+		.item.today .link .day_txt {
+			color: #fff;
+		}
+		.item.today .link .day_num {
+			@include border-radius(17px);
+
+			color: #464c69;
+			background-color: #fff;
+		}
+	}
+}
+
+body.showtime .movie_wrap {
+	& + .movie_wrap {
+		margin-top: 18px;
+	}
+	.title_wrap {
+		@include clearfix;
+
+		background-color: #e2e2e2;
+	}
+
+	.title_wrap .icon_wrap {
+		display: block;
+		float: right;
+		padding: 16px 14px 17px;
+
+		.icon_info {
+			@include sp_icon($info_mark);
+		}
+	}
+	.title_wrap .txt {
+		@extend %title_type;
+
+		padding: 9px 25px 10px 14px;
+
+		.movie {
+			@include ellipsis;
+
+			display: block;
+			font-size: 12px;	
+		}
+		.time {
+			@include ellipsis;
+
+			display: block;
+			padding-top: 2px;
+			font-size: 10px;
+			color: #909090;
+		}		
+	}
+
+	.cinema_title {
+		padding: 18px 14px 0;
+		font-weight: bold;
+		line-height: 10px;
+	}
+	.time_list_wrap {
+		min-width: 306px;
+		margin-top: 10px;
+		padding: 0 7px;
+	}
+	.time_list {
+		@include clearfix;
+
+		.item {
+			float: left;
+			width: 25%;		
+			text-align: center;
+		}
+		.item.on .link  {
+			color: #222222;
+		}		
+		.link {
+			display: inline-block;
+			width: 60px;
+			height: 38px;
+			text-indent: -2px;
+			color: #a9a9a9;
+			border: 1px solid #d9d9d9;
+		}
+		.item:nth-child(1n+5) .link {
+			margin-top: 15px;
+		}
+		.txt.big {
+			display: block;
+			height: 15px;
+			margin-top: 6px;
+			line-height: 15px;
+			font-size: 13px;
+			font-weight: bold;
+			vertical-align: middle;
+		}
+		.txt.small {
+			display: block;
+			height: 12px;
+			line-height: 12px;
+			font-size: 10px;
+			font-weight: normal;
+			vertical-align: middle;
+		}
+	}
+}
