@@ -2,147 +2,265 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8"/>
-<meta name="format-detection" content="telephone=no">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-<title>Major Cineplex</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>PICKSELL : 방문수거 신청하기</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
 <link rel="stylesheet" href="./css/main.css">
-<!-- [D] 마크업 확인용 스크립트 -->
 <script src="js/jquery.min.js"></script>
-<script src="js/active.js"></script>
-<!-- //[D] 마크업 확인용 스크립트 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.top_banner_wrap .icon').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().parent().toggleClass('next');
+	});
+	$('.item.movie .link').on('click', function(e){
+		e.preventDefault();
+		//$(this).parent().toggleClass('play');
+		$('.link.dimm_wrap').parent().show();
+	});
+	$('.link.dimm_wrap').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().hide();
+	});		
+	$('.goods_purchase_price .link.open').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().parent().addClass('on');
+	});
+	$('.goods_purchase_price .link.close').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().parent().removeClass('on');
+	});
+	$('.qna .link.open').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().parent().addClass('on');
+	});
+	$('.qna .link.close').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().parent().removeClass('on');
+	});
+})
+</script>
+
 </head>
+
+
 <body class="main">
+
 <!-- 본문 바로가기 -->
 <div class="u_skip"><a href="#content">본문 바로가기</a></div>
 <!-- //본문 바로가기 -->
 
+<!-- [D] 2번째 화면 전환 시 next 클래스 추가 -->
+<div class="header" id="header">
+	<h1 class="blind">PICKSELL 방문수거 신청하기</h1>
+
+	<!-- [D] 화면 사이즈 강제 축소 : 67%-->
+	<div class="top_banner_wrap" style="zoom:0.67">
+		<ul class="top_banner">
+			<li class="item">
+				<img src="./img/top_banner_01.png" alt="편리하게 돈 버는 서비스, 픽셀 안쓰는 육아용품 간단히 방문수거 신청하기" width="1120" height="560">
+			</li>
+
+			<!-- [D] 영상 실행 시 play 클래스 추가 -->
+			<li class="item movie">
+				<img src="./img/top_banner_02.png" alt="SBS모닝와이드 픽셀 수거 소개" width="1120" height="560">
+				<a href="#" class="link play"><span class="blind">실행</span></a>
+				<a href="#" class="link stop"><span class="blind">정지</span></a>
+			</li>			
+		</ul>
+		<div class="pg" style="display:block;">
+			<div class="pg_num_area"> 
+				<span class="pg_num">1</span>
+				<span class="pg_num">2</span>  
+			</div>	        
+	    </div>
+	    <a href="#" class="icon arr_left"><span class="blind">좌측 화면</span></a>
+	    <a href="#" class="icon arr_right"><span class="blind">우측 화면</span></a>
+	</div>
+</div>
 
 <!-- content -->
 <div class="content" id="content">
 
+<!-- content inner-->
+<!-- [D] 화면 사이즈 강제 축소 : 67%-->
+<div class="content_inner" style="zoom:0.67">
 
-<!-- top 배너 -->
-<!-- [D] 배너 비 노출 시 display:none 처리 -->
-<div id="top_ad_wrap" style="height:80px;display:block;">
-	<a href="#" style="display:block;background:#fff;">
-	<span id="back_img" style="display:block;width:100%;height:80px;background-color:#e2e2e2;text-align:center;"><img src="img/top_ad.jpg" alt="AD" width="320" height="80" style="vertical-align:top;border:none"></span>
-	</a>
-</div>
-<!-- //top 배너 -->
-
-
-<!-- select cinemas -->
-<div class="select_cinemas_wrap">
-	<h3 class="title"><a href="#" class="link">Select Cinemas<span class="icon_arr"></span></a></h3>
+<div class="business_info">
+	<h2 class="blind">픽셀 사업 현황</h2>
 	<ul class="list">
 		<li class="item">
-			<a href="#" class="link" role="button">Mega Cineplex<span class="blind">bookmark</span></a>
+			<img src="./img/icon_info_01.png" alt="" width="108" height="104">
+			<div class="num">8385개</div>
+			<div class="exp">지금까지 공유물품수</div>
 		</li>
 		<li class="item">
-			<a href="#" class="link" role="button">Cinemas #1<span class="blind">bookmark</span></a>
+			<img src="./img/icon_info_02.png" alt="" width="108" height="104">
+			<div class="num">35개</div>
+			<div class="exp">현재 수거 대기건수</div>
 		</li>
 		<li class="item">
-			<a href="#" class="link" role="button">Cinemas #2<span class="blind">bookmark</span></a>
-		</li>		
+			<img src="./img/icon_info_03.png" alt="" width="108" height="104">
+			<div class="num">543,000원</div>
+			<div class="exp">최고 판매액</div>
+		</li>
 	</ul>
 </div>
-<!-- //select cinemas -->
 
 
-<!-- select movies -->
-<div class="movies_wrap">
-	<div class="title_wrap">
-		<h3 class="title">Movies</h3>
-		<form action="#" method="get">
-			<fieldset>
-				<legend class="blind">Sort by</legend>
-				<div class="select_wrap">
-					<label for="select" class="label">Sort by</label>
-					<select name="select" class="select" id="select">
-						<option value="all">All</option>
-						<option value="system">System type</option>
-					</select>
-				</div>
-			</fieldset>
-		</form>	
+<div class="pickup_guide">
+	<h2 class="blind">수거 진행 방식 안내</h2>
+	<div class="guide g1">
+		<h3 class="title">수거 진행 방식은 이렇습니다.</h3>
+		<p class="sub_title">간편접수, 해피콜 연락, 방문수거후 입금</p>
+		<img src="./img/guide_01.png" alt="" width="1120" height="325">
 	</div>
-	<ul class="list">
+	<div class="guide g2">
+		<h3 class="title">방문 수거 가능지역과 수거비용</h3>
+		<p class="sub_title">방문수거 가능지역</p>
+		<img src="./img/guide_02.png" alt="" width="1120" height="269">
+	</div>
+	<div class="guide g3">
+		<h3 class="title">수거 가능 품목 예시</h3>
+		<p class="sub_title">장난감, 출산용품, 육아용품, 도서,  유모차, <span class="point_txt_01">주방가전, 문화 상품권</span></p>
+		<img src="./img/guide_03.png" alt="" width="1120" height="210">
+	</div>
+</div>
+
+<!-- [D] 펼치기 선택 시 'on' 클래스 추가 바람 -->
+<div class="goods_purchase_price">
+	<h2 class="title">픽셀 대표 매입가</h2>
+	<ul class="goods_wrap">
 		<li class="item">
-			<div class="item_inner">
-				<a href="#" class="link"><img src="img/movie_poster.png" alt="poster"><div class="movie_title"><span class="exp">เพิ่มปริมาณธุรกรรมด้วยวิธีการชำระเงินที่สะดวกและปลอดภัยผ่าน LINE Pay</span>
-				<span class="day now">now showing</span></div></a>
-				<div class="btn_wrap">
-					<div class="btn_inner"><a href="" class="link share" role="button">Share</a></div>
-					<div class="btn_inner"><a href="" class="link buy" role="button">Buy</a></div>
-				</div>
-			</div>
-		</li>	
-		<li class="item">
-			<div class="item_inner">
-				<a href="#" class="link"><img src="img/movie_poster.png" alt="poster">
-				<div class="movie_title"><span class="exp">เพิ่มปริมาณธุรกรรมด้วยวิธีการชำระเงินที่สะดวกและปลอดภัยผ่าน LINE Pay</span><span class="day">Dec 15.2016</span></div></a>
-				<div class="btn_wrap">
-					<div class="btn_inner"><a href="" class="link share" role="button">Share</a></div>
-					<div class="btn_inner"><a href="" class="link buy" role="button">Buy</a></div>
-				</div>
-			</div>
-		</li>	
-		<li class="item">
-			<div class="item_inner">
-				<a href="#" class="link"><img src="img/movie_poster.png" alt="poster">
-				<div class="movie_title"><span class="exp">blablablablab lablablablablaaaabla blablablablabla blablablaasdasdsd</span><span class="day now">now showing</span></div></a>
-				<div class="btn_wrap">
-					<div class="btn_inner"><a href="" class="link share" role="button">Share</a></div>
-					<div class="btn_inner"><a href="" class="link buy" role="button">Buy</a></div>
-				</div>
-			</div>
-		</li>	
-		<li class="item">
-			<div class="item_inner">
-				<a href="#" class="link"><img src="img/movie_poster.png" alt="poster"><div class="movie_title"><span class="exp"></span><span class="day">Dec 15.2016</span></div></a>
-				<div class="btn_wrap">
-					<div class="btn_inner"><a href="" class="link share" role="button">Share</a></div>
-					<div class="btn_inner"><a href="" class="link buy" role="button">Buy</a></div>
-				</div>
-			</div>
+			<img src="./img/goods_01.png" alt="피셔프라이스 러닝홈(한영버젼):10,000원~44,000원, 피셔프라이스 레인포레스트 점퍼루:10,000원~44,000원, 피셔프라이스 아기 체육관:10,000원~44,000원, 피셔프라이스 아기 체육관:10,000원~44,000원" width="1120" height="445">
 		</li>
 		<li class="item">
-			<div class="item_inner">
-				<a href="#" class="link"><img src="img/movie_poster.png" alt="poster"><div class="movie_title"><span class="exp">เเมื่อกรอกแบบฟอร์มสมัครใช้บริการแล้ว พนักงานจะดำเนินการตรวจสอบการลงทะเบียนทันที</span><span class="day now">now showing</span></div></a>
-				<div class="btn_wrap">
-					<div class="btn_inner"><a href="" class="link share" role="button">Share</a></div>
-					<div class="btn_inner"><a href="" class="link buy" role="button">Buy</a></div>
-				</div>
-			</div>
-		</li>	
+			<img src="./img/goods_01.png" alt="피셔프라이스 러닝홈(한영버젼):10,000원~44,000원, 피셔프라이스 레인포레스트 점퍼루:10,000원~44,000원, 피셔프라이스 아기 체육관:10,000원~44,000원, 피셔프라이스 아기 체육관:10,000원~44,000원" width="1120" height="445">
+		</li>
 		<li class="item">
-			<div class="item_inner">
-				<a href="#" class="link"><img src="img/movie_poster.png" alt="poster"><div class="movie_title"><span class="exp">blablablablablablablablablaaaablab lablablablablablablablaasdasdsd</span><span class="day">Dec 15.2016</span></div></a>
-				<div class="btn_wrap">
-					<div class="btn_inner"><a href="" class="link share" role="button">Share</a></div>
-					<div class="btn_inner"><a href="" class="link buy" role="button">Buy</a></div>
+			<img src="./img/goods_01.png" alt="피셔프라이스 러닝홈(한영버젼):10,000원~44,000원, 피셔프라이스 레인포레스트 점퍼루:10,000원~44,000원, 피셔프라이스 아기 체육관:10,000원~44,000원, 피셔프라이스 아기 체육관:10,000원~44,000원" width="1120" height="445">
+		</li>				
+	</ul>
+	<div class="more_wrap">
+		<a href="" class="link open">펼쳐보기</a>
+		<a href="" class="link close">접기</a>
+	</div>
+</div>
+
+
+<div class="attention">
+	<h2 class="blind">주의사항</h2>
+	<img src="./img/attention.png" alt="주의사항 1.고장, 파손, 오염된 상품은 매입불가  현장에서 발견되지 못한 고장, 파손 오염된 상품은 매입 후에라도 취소될 수 있습니다. 2.소량의 물품은 무료 방문 매입 불가 총 매입가 5만원 미만: 수거비로 1만원을 차감합니다. 3.수거 불가능한 품목들 의류, 잡화, 카시트, 인형, 가구" width="1120" height="476">
+</div>
+
+<!-- [D] 펼치기 선택 시 'on' 클래스 추가 바람 -->
+<div class="qna">
+	<h2 class="blind">Q&#38;A</h2>
+	<img src="./img/title_qna.png" alt="" width="188" height="77">
+	<dl>
+		<dt>질문: 판매가는 어떻게 책정되나요?</dt>
+		<dd>답변: 현장에서 픽맨이 상품의 상태롤 보고 측정합니다. 가격은 중고시세 대비해서 드립니다.</dd>
+		<dt>질문: 판매가는 어떻게 책정되나요?</dt>
+		<dd>답변: 현장에서 픽맨이 상품의 상태롤 보고 측정합니다. 가격은 중고시세 대비해서 드립니다.</dd>	
+		<dt>질문: 판매가는 어떻게 책정되나요?</dt>
+		<dd>답변: 현장에서 픽맨이 상품의 상태롤 보고 측정합니다. 가격은 중고시세 대비해서 드립니다.</dd>	
+	</dl>
+	<div class="more_wrap">
+		<a href="" class="link open">펼쳐보기</a>
+		<a href="" class="link close">접기</a>
+	</div>
+</div>
+
+
+<div class="request">
+	<h2 class="title">수거 신청하기</h2>
+	<form action="#" method="get">
+		<fieldset>
+			<legend class="blind">수거 신청하기 폼</legend>
+			<div class="request_form">
+				<h3 class="title_form">필수 항목</h3>
+				<div class="input_wrap">
+					<label class="blind">이름</label>
+					<input type="text" name="name" class="input" placeholder="이름 입력"/>
+				</div>
+				<div class="input_wrap">
+					<label class="blind">전화번호 인증</label>
+					<input type="text" name="tel" class="input" placeholder="전화번호 인증"/>
+				</div>
+				<div class="input_wrap"> 
+					<label class="blind">주소입력</label>
+					<input type="text" name="address" class="input" placeholder="주소입력"/>
+				</div>
+				<div class="input_wrap agree">
+					<label class="agree_txt" for="checkbox">
+					<input type="checkbox" id="checkbox" name="agree" class="checkbox blind"/>
+					<span class="icon_checkbox"></span>총 책정가 5만원 이하시 수거비를 받는데 동의 하시겠습니까?
+					</label>
+				</div>
+				<h3 class="title_form">*선택 항목</h3>
+				<div class="input_wrap">
+					<label class="blind">판매희망 물품 기재</label>
+					<input type="text" name="goods" class="input" placeholder="판매희망 물품 기재"/>
+				</div>
+				<div class="input_wrap">
+					<label class="blind">방문불가 시간 및 요청사항 메모</label>
+					<input type="text" name="time" class="input" placeholder="방문불가 시간 및 요청사항 메모"/>
 				</div>
 			</div>
-		</li>										
-	</ul>
+		</fieldset>		
+		<div class="confirm">
+			<input type="submit" value="제출하기" class="btn">
+		</div>	
+	</form>
 </div>
-<!-- //select movies -->
 
 
-<!-- my ticket -->
-<div>
-	<a href="#" class="my_ticket" role="button">
-		<span class="blind">my ticket</span>
-		<!-- [D] new 표시 비 노출 시 display: none 처리 -->
-		<span class="ico_new" style="display:block;"></span>
-	</a>
 </div>
-<!-- //my ticket -->
-
+<!-- //content inner-->
 
 </div>
 <!-- //content -->
 
+
+<div class="footer">
+	<div class="footer_inner">
+		<img src="./img/footer_address.png" width="560" height="205" alt="">
+		<h2 class="blind">고객문의</h2>
+		<ul class="blind">
+			<li>운영시간 : 오전10시 ~ 오후6시 (월~금)</li>
+			<li>전화번호 : 02-1522-8077</li>
+			<li>카카오톡 친구 추가 : 픽셀</li>
+			<li>주소 : 서울시 송파구 가락로2  금송빌딩 3층 303호</li>
+			<li>© AFFIX corporation</li>
+		</ul>
+		<div class="social_wrap">
+			<a href="#" class="facebook">
+				<img src="./img/facebook_picksell.png" alt="PICKSELL facebook" width="87" height="17">
+			</a>
+			<a href="#" class="blog">
+				<img src="./img/blog_picksell.png" alt="PICKSELL facebook" width="105" height="17">
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<!-- [D] 화면 사이즈 강제 축소 : 67%-->
+<div class="top_slide_wrap"  style="zoom:0.67">
+	<a href="#" class="link"><img src="./img/slide_go_pickup.jpg" alt="PICKSELL facebook" width="225" height="247"><span class="blind">수거신청 바로가기</span></a>
+	<a href="#" class="link"><img src="./img/slide_app_down.jpg" alt="PICKSELL facebook" width="225" height="247"><span class="blind">수거신청 바로가기</span></a>
+</div>
+
+
+<!-- layer_pop_wrap -->
+<!-- [D] 레이어 팝업 노출 시 'display: block;' 으로 변경 바람 -->
+<div class="layer_pop_wrap" style="display:none">
+	<a href="#" class="link dimm_wrap"></a>
+	<div class="item_wrap">
+		<iframe width="957" height="548" src="https://www.youtube.com/embed/UUNBZYBKxW0" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+<!-- //layer_pop_wrap -->
 
 </body>
 </html>

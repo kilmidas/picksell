@@ -24,30 +24,6 @@
     opacity: $value; 
 }
 
-@mixin thum_box($width:58px, $height:58px, $color:#d9d9d9)  {
-    position: relative;
-    line-height: 0;
-
-    &:after {
-      display: block;
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: $width;
-      height: $height;
-      border: 1px solid $color;
-    }
-}
-
-@mixin bottom_height($height:14px){
-  &:after {
-    height: $height;
-    overflow: hidden;
-    display: block;
-    content: '';
-  }
-}
 
 @mixin ellipsis {
   overflow:hidden;
@@ -55,15 +31,6 @@
   text-overflow:ellipsis
 }
 
-@mixin ellipsisMulti($line:2) {
-  display: -webkit-box;
-  overflow:hidden;
-  white-space: normal;
-  word-break:break-word;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: $line;
-  -webkit-box-orient: vertical;   
-}
 
 @mixin clearfix {
     &:after {

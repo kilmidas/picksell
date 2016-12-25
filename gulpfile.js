@@ -26,7 +26,7 @@ var dir  = {
      * pc : sprite.support_1x.mustache
      * mobile : sprite.support_2x.mustache
      * **/
-    template : 'sprite.support_2x.mustache',
+    template : 'sprite.support_1x.mustache',
     source: 'src/',
     scss:   'scss/lib/spritesmith/',
     img:    'img/',

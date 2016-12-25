@@ -1,0 +1,24 @@
+// how to use : Use following mixins.
+// variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
+    $수거사이트_pc_마크업_01_03: 0px 0px 0px 0px 53px 53px 116px 53px '../img/sp_images.png' '수거사이트_pc_마크업_01_03' 'sp_images';
+    $수거사이트_pc_마크업_01_06: 63px 0px -63px 0px 53px 53px 116px 53px '../img/sp_images.png' '수거사이트_pc_마크업_01_06' 'sp_images';
+
+//ancestor
+    $sp_images-width: 116px;
+    $sp_images-height: 53px;
+    $sp_images-image: '../img/sp_images.png';
+    $sp_images-sprites: ($-_pc_-_01_03, $-_pc_-_01_06, );
+    $sp_images_sprites_name: (-_pc_-_01_03, -_pc_-_01_06, );
+    $sp_images: (116px, 53px, '../img/sp_images.png', $sp_images-sprites, );
+
+//mixin
+
+        %sp_images {
+        background-image: url('../img/sp_images.png');
+        }
+
+        @mixin sp_images($sprite) {
+        @extend %sp_images;
+        @include spriteSizeSupport1x($sprite);
+        @include spriteBackgroundPositionSupport1x($sprite);
+        }

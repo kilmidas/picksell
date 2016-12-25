@@ -1,44 +1,30 @@
 // how to use : Use following mixins.
 // variable : [X-axis] [Y-axis] [offset_x] [offset_y] [width] [height] [total_width] [total_height] [image_url] [image_name] [folder_name]
-    $arr_down_01: 310px 266px -310px -266px 14px 8px 368px 356px '../img/sp_icon.png' 'arr_down_01' 'sp_icon';
-    $arr_down_02: 270px 170px -270px -170px 26px 16px 368px 356px '../img/sp_icon.png' 'arr_down_02' 'sp_icon';
-    $arr_down_03: 358px 170px -358px -170px 10px 10px 368px 356px '../img/sp_icon.png' 'arr_down_03' 'sp_icon';
-    $arr_right_01: 208px 170px -208px -170px 16px 26px 368px 356px '../img/sp_icon.png' 'arr_right_01' 'sp_icon';
-    $arr_up_01: 286px 266px -286px -266px 14px 8px 368px 356px '../img/sp_icon.png' 'arr_up_01' 'sp_icon';
-    $arr_up_02: 234px 170px -234px -170px 26px 16px 368px 356px '../img/sp_icon.png' 'arr_up_02' 'sp_icon';
-    $boomark_off: 270px 208px -270px -208px 44px 42px 368px 356px '../img/sp_icon.png' 'boomark_off' 'sp_icon';
-    $boomark_on: 216px 208px -216px -208px 44px 42px 368px 356px '../img/sp_icon.png' 'boomark_on' 'sp_icon';
-    $complete_mark: 0px 208px 0px -208px 148px 148px 368px 356px '../img/sp_icon.png' 'complete_mark' 'sp_icon';
-    $drawer_menu: 324px 208px -324px -208px 44px 34px 368px 356px '../img/sp_icon.png' 'drawer_menu' 'sp_icon';
-    $indicator_off: 332px 170px -332px -170px 16px 16px 368px 356px '../img/sp_icon.png' 'indicator_off' 'sp_icon';
-    $indicator_on: 306px 170px -306px -170px 16px 16px 368px 356px '../img/sp_icon.png' 'indicator_on' 'sp_icon';
-    $info_mark: 204px 266px -204px -266px 32px 32px 368px 356px '../img/sp_icon.png' 'info_mark' 'sp_icon';
-    $layer_close_btn: 246px 266px -246px -266px 30px 30px 368px 356px '../img/sp_icon.png' 'layer_close_btn' 'sp_icon';
-    $main_boomark_on: 158px 266px -158px -266px 36px 34px 368px 356px '../img/sp_icon.png' 'main_boomark_on' 'sp_icon';
-    $my_ticket: 208px 0px -208px 0px 160px 160px 368px 356px '../img/sp_icon.png' 'my_ticket' 'sp_icon';
-    $my_ticket_new: 158px 208px -158px -208px 48px 48px 368px 356px '../img/sp_icon.png' 'my_ticket_new' 'sp_icon';
-    $not_availablel_mark: 0px 0px 0px 0px 198px 198px 368px 356px '../img/sp_icon.png' 'not_availablel_mark' 'sp_icon';
+    $arr_down: 246px 172px -246px -172px 34px 35px 344px 256px '../img/sp_icon.png' 'arr_down' 'sp_icon';
+    $arr_up: 290px 172px -290px -172px 34px 35px 344px 256px '../img/sp_icon.png' 'arr_up' 'sp_icon';
+    $banner_arr_left: 0px 172px 0px -172px 50px 84px 344px 256px '../img/sp_icon.png' 'banner_arr_left' 'sp_icon';
+    $banner_arr_right: 60px 172px -60px -172px 50px 84px 344px 256px '../img/sp_icon.png' 'banner_arr_right' 'sp_icon';
+    $checkbox_off: 120px 172px -120px -172px 53px 53px 344px 256px '../img/sp_icon.png' 'checkbox_off' 'sp_icon';
+    $checkbox_on: 183px 172px -183px -172px 53px 53px 344px 256px '../img/sp_icon.png' 'checkbox_on' 'sp_icon';
+    $play_btn: 0px 0px 0px 0px 167px 162px 344px 256px '../img/sp_icon.png' 'play_btn' 'sp_icon';
+    $stop_btn: 177px 0px -177px 0px 167px 162px 344px 256px '../img/sp_icon.png' 'stop_btn' 'sp_icon';
 
 //ancestor
-    $sp_icon-width: 368px;
-    $sp_icon-height: 356px;
+    $sp_icon-width: 344px;
+    $sp_icon-height: 256px;
     $sp_icon-image: '../img/sp_icon.png';
-    $sp_icon-sprites: ($arr_down_01, $arr_down_02, $arr_down_03, $arr_right_01, $arr_up_01, $arr_up_02, $boomark_off, $boomark_on, $complete_mark, $drawer_menu, $indicator_off, $indicator_on, $info_mark, $layer_close_btn, $main_boomark_on, $my_ticket, $my_ticket_new, $not_availablel_mark, );
-    $sp_icon_sprites_name: (arr_down_01, arr_down_02, arr_down_03, arr_right_01, arr_up_01, arr_up_02, boomark_off, boomark_on, complete_mark, drawer_menu, indicator_off, indicator_on, info_mark, layer_close_btn, main_boomark_on, my_ticket, my_ticket_new, not_availablel_mark, );
-    $sp_icon: (368px, 356px, '../img/sp_icon.png', $sp_icon-sprites, );
+    $sp_icon-sprites: ($arr_down, $arr_up, $banner_arr_left, $banner_arr_right, $checkbox_off, $checkbox_on, $play_btn, $stop_btn, );
+    $sp_icon_sprites_name: (arr_down, arr_up, banner_arr_left, banner_arr_right, checkbox_off, checkbox_on, play_btn, stop_btn, );
+    $sp_icon: (344px, 256px, '../img/sp_icon.png', $sp_icon-sprites, );
 
 //mixin
 
         %sp_icon {
         background-image: url('../img/sp_icon.png');
-        $sprite-background-size-x: 368px / 2;
-        $sprite-background-size-y: 356px / 2;
-        -webkit-background-size: $sprite-background-size-x $sprite-background-size-y;
-        background-size: $sprite-background-size-x $sprite-background-size-y;
         }
 
         @mixin sp_icon($sprite) {
         @extend %sp_icon;
-        @include spriteSize($sprite);
-        @include spriteBackgroundPosition($sprite);
+        @include spriteSizeSupport1x($sprite);
+        @include spriteBackgroundPositionSupport1x($sprite);
         }

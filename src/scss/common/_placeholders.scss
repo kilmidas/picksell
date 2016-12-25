@@ -2,94 +2,41 @@
 
 /*_placeholders.scss */
 
-/* %title_type */
-%title_type {
-	display: block;
-	font-weight: bold;
-	padding: 14px 25px 14px 14px;
-}
-
-/* %btn_type */
-%btn_type {
-	margin-top: 8px;
-	
-	.link {
-		@include border-radius(2px);
-
-		display: block;
-		font-weight: bold;
-		font-size: 13px;
-		color: #fff;
-		text-align: center;
-	}
-}
-
-/* %btn_type_bottom */
-%btn_type_bottom {
-	@extend %btn_type;
-
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right:0;
-	margin: 0;
-	padding: 14px;
-	background-color: #f2f2f2;
-	border-top: 2px solid #dddee1;
-
-	.btn_inner {
-		height: 42px;
-		line-height: 42px;				
-	}
-	.link {
-		font-size: 17px;
-	}
-}
-
-/* %common_info_type */
-%common_info_type {
-	padding: 14px 14px 12px;
-	border-top: 1px solid #c7c9cf;
-	background-color: #464c69;
-
-	@include clearfix;
-
-	.movie_thum {
-		float: left;
-		background-color: #e2e2e2;
-		margin-right: 10px;
-		margin-bottom: 2px;
-
-		@include thum_box(58px, 83px);
-	}
-	.movie_info {
-		color: #fff;
-		margin-top: 7px;
-	}
-	.title {
-		margin-top: 7px;
-		font-size: 13px;
-		line-height: 13px;
-		font-weight: bold;
-	    word-break: break-word;
-	}
-}
-
-/* %layer_pop_type */
-%layer_pop_type {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	&:before {
-		display: block;
-		width: 100%;
-		height: 100%;
+/* more_wrap */
+%more_wrap {
+	.more_wrap {
+		position: absolute;
+	}    	
+	.more_wrap .link {
+		display: inline-block;
+		overflow: hidden;
+		text-align: right;
+		line-height: 35px;
+		padding: 10px;
+		vertical-align: middle;
+	}    	
+	.more_wrap .link.open:after {
+		display: inline-block;
 		content: '';
-		background-color: #000;
-
-		@include opacity(0.6);		
+		vertical-align: middle;
+		margin-left: 15px;
+		@include sp_icon($arr_down);
+	}
+	.more_wrap .link.close:after {
+		display: inline-block;
+		content: '';
+		vertical-align: middle;
+		margin-left: 15px;
+		@include sp_icon($arr_up);
+	}    	
+	.more_wrap .link.close {
+		display: none;
+	}    	
+	&.on .more_wrap .link.open {
+		display: none;
+	}
+	&.on .more_wrap .link.close {
+		display: inline-block;
 	}
 }
+

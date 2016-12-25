@@ -9,29 +9,23 @@ body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fi
 }
 
 body, input, textarea, select, button, table {
-	font-size: 14px;
+	font-size: 26px;
 	color: $G-body-color;
 }
 
 html[lang=ko] body, html[lang=ko] input, html[lang=ko] textarea, html[lang=ko] select, html[lang=ko] button, html[lang=ko] table {
-	font-family: $G-font-family-kr;
+	font-family: 'NanumGothic', '나눔고딕','맑은 고딕', 'Malgun Gothic', '돋움', Dotum, Sans-serif;
 }
 
-html[lang=en] body, html[lang=en] input, html[lang=en] textarea, html[lang=en] select, html[lang=en] button, html[lang=en] table {
-	font-family: $G-font-family-en;
-}
-
-html[lang=th] body, html[lang=th] input, html[lang=th] textarea, html[lang=th] select, html[lang=th] button, html[lang=th] table {
-	font-family: $G-font-family-th;
-}
 html {
 	height: 100%;
 }
-body {
-	height: 100%;
-}
+
 img, fieldset {
 	border: 0;
+}
+img {
+	vertical-align: top;
 }
 
 table {
@@ -71,10 +65,6 @@ textarea {
 
 hr {
 	display: none;
-}
-
-body {
-	border-top: 1px solid #b1b1b1;
 }
 
 .u_skip, .blind, legend {
