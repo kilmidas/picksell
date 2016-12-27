@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/*_popup_post.scss */
+.content_popup {
+	width: 537px;
+	padding: 48px 42px 115px;
+	text-align: left;
+}
+.pop_header h1 {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 600;
+}
+.pop_section {
+	margin-top: 26px;
+
+	h2 {
+		font-size: 18px;
+		line-height: 16px;
+		color: #f94c00;
+		font-weight: 500;
+	}
+
+	.input_wrap {
+		display: inline-block;
+		position: relative;
+		margin-top: 16px;
+	}
+
+	.input {
+		@include box-sizing;
+
+		width: 448px;
+		height: 60px;
+		border: 1px solid #d2d2d2;
+		font-size: 16px;
+		line-height: 59px;
+		font-weight: 500;
+		text-indent: 24px;
+		letter-spacing: -1px;
+	}
+	.input.phone {
+		width: 392px;
+	}
+	.input:focus {
+		outline: none;
+		border: 1px solid #f94c00;
+	}
+	.btn_clear {
+	    display: inline-block;
+	    position: absolute;
+	    top: 0;
+	    right: 90px;
+	    bottom: 0;
+	    padding: 15px 20px;
+	}
+	.btn_clear:before {
+		display: inline-block;
+		content: '';
+		@include sp_icon($delete);
+	}
+	.btn.search {
+		display: inline-block;
+		width: 52px;
+		height: 24px;
+		padding: 18px;
+		font-size: 17px;
+		line-height: 24px;
+		color: #fff;
+		background-color: #2f2d2d;
+		text-align: center;
+		vertical-align: top;
+	}
+	.btn_clear.phone {
+	    right: 145px;
+	}
+	.btn.phone {
+		display: inline-block;
+		width: 109px;
+		height: 24px;
+		padding: 18px;
+		font-size: 17px;
+		line-height: 24px;
+		color: #fff;
+		background-color: #2f2d2d;
+		text-align: center;
+		vertical-align: top;
+	} 
+	ul {
+		font-size: 17px;
+		font-weight: 500;
+		color: #2a2925;
+		margin-top: 40px;
+	}
+	li {
+		margin-top: 10px;
+	}
+	.guide_wrap {
+
+		li span {
+			color: #a9a9a9;
+		}
+	}
+	.result_wrap {
+
+		overflow: hidden;
+		overflow-y: auto;
+		position: relative;
+		height: 354px;
+		margin-top: 27px;
+
+		li span {
+			display: inline-block;
+			width: 60px;
+			color: #f94c00;
+		}
+	}
+	.detail_wrap {
+		margin-top: 27px;
+
+		.input {
+			width: 100%;
+		}
+	}
+}
+
+.pop_footer {
+	margin-top: 290px;
+	text-align: right;
+
+	.btn_area {
+	}
+	.btn {
+		display: inline-block;
+		width: 35px;
+		height: 25px;
+		padding: 16px 20px;
+		font-size: 17px;
+		font-weight: 500;
+		line-height: 25px;
+		color: #fff;
+		background-color: #2f2d2d;
+		text-align: center;
+		vertical-align: top;
+		border: 1px solid #d2d2d2;
+	}
+	.btn.cancel {
+		color: #2f2d2d;
+		background-color: #fff;
+	}	
+	.btn.confirm {
+		margin-left: 5px;
+	}
+}

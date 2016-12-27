@@ -6,6 +6,7 @@
     $banner_arr_right: 60px 172px -60px -172px 50px 84px 344px 256px '../img/sp_icon.png' 'banner_arr_right' 'sp_icon';
     $checkbox_off: 120px 172px -120px -172px 53px 53px 344px 256px '../img/sp_icon.png' 'checkbox_off' 'sp_icon';
     $checkbox_on: 183px 172px -183px -172px 53px 53px 344px 256px '../img/sp_icon.png' 'checkbox_on' 'sp_icon';
+    $delete: 120px 235px -120px -235px 17px 17px 344px 256px '../img/sp_icon.png' 'delete' 'sp_icon';
     $play_btn: 0px 0px 0px 0px 167px 162px 344px 256px '../img/sp_icon.png' 'play_btn' 'sp_icon';
     $stop_btn: 177px 0px -177px 0px 167px 162px 344px 256px '../img/sp_icon.png' 'stop_btn' 'sp_icon';
 
@@ -13,8 +14,8 @@
     $sp_icon-width: 344px;
     $sp_icon-height: 256px;
     $sp_icon-image: '../img/sp_icon.png';
-    $sp_icon-sprites: ($arr_down, $arr_up, $banner_arr_left, $banner_arr_right, $checkbox_off, $checkbox_on, $play_btn, $stop_btn, );
-    $sp_icon_sprites_name: (arr_down, arr_up, banner_arr_left, banner_arr_right, checkbox_off, checkbox_on, play_btn, stop_btn, );
+    $sp_icon-sprites: ($arr_down, $arr_up, $banner_arr_left, $banner_arr_right, $checkbox_off, $checkbox_on, $delete, $play_btn, $stop_btn, );
+    $sp_icon_sprites_name: (arr_down, arr_up, banner_arr_left, banner_arr_right, checkbox_off, checkbox_on, delete, play_btn, stop_btn, );
     $sp_icon: (344px, 256px, '../img/sp_icon.png', $sp_icon-sprites, );
 
 //mixin
