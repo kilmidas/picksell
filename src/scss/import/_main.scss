@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /*_main.scss */
 .main {
 	position:relative;
@@ -118,6 +117,7 @@
 .content {
 	width: 100%;
 	text-align: center;
+	overflow: hidden;
 
     .content_inner {
     	display: inline-block;
@@ -125,12 +125,14 @@
 	    width: 1120px;
 	    letter-spacing: -2.5px;
     	vertical-align: top;
-    	text-align: left;    
+    	text-align: left;
+    	overflow: hidden;
     }
 
 
     .business_info {
     	margin-top: 89px;
+		overflow:hidden;
     }
 
     .list {
@@ -350,18 +352,19 @@
 .footer {
 	margin-top: 139px;
 	background-color: #17181c;
+	overflow:hidden;
 
 	.footer_inner {
 		position: relative;
 		overflow: hidden;
 	    width: 1120px;
 	    margin: 0 auto;
-	    padding-left: 230px;
+	    padding-left: 140px;
 	}
 	.social_wrap {
 		position: absolute;
 		top: 136px;
-		left: 726px;
+		left: 716px;
 		line-height: 0;
 
 		a {
@@ -390,11 +393,11 @@
 }
 
 .layer_pop_wrap {
-	position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 
     .dimm_wrap {
 	   	display: block;
@@ -407,12 +410,13 @@
 		opacity: 0.6;
     }
     .item_wrap {
+    	@include transform(translateY(-10%));
+		@include transform(translateX(-50%));
+
     	display: inline-block;
-	    position: absolute;
-	    top: 169px;
-	    right: 0;
-	    left: 0;
-		text-align: center;	 
+		position: fixed;
+		top: 10%;
+		left: 50%;
 		line-height: 0;
 
 		iframe {

@@ -59,6 +59,15 @@ var getFolders = function (dir) {
 // ---------------------------------
 // Tasks
 // ---------------------------------
+// task.build
+gulp.task('build', function() {
+    return gulp.src("src/scss/**/*.scss")
+        .pipe(sass({
+            outputStyle: 'compact' // output style is [nested | expanded | compact | compressed]
+        }).on('error', sass.logError))
+        .pipe(csssort())
+        .pipe(gulp.dest("src/css"));
+});
 // task.sprites
 gulp.task('sprites', function () {
     // set target folders

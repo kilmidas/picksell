@@ -6,6 +6,10 @@
 	padding: 48px 42px 115px;
 	text-align: left;
 }
+.content_popup.complete {
+	width: 405px;
+	padding: 60px 106px 165px;
+}
 .pop_header h1 {
     font-size: 24px;
     line-height: 20px;
@@ -108,11 +112,25 @@
 		position: relative;
 		height: 354px;
 		margin-top: 27px;
+		line-height: 30px;
 
-		li span {
-			display: inline-block;
-			width: 60px;
+		li + li {
+			margin-top: 20px;
+		}
+		li {
+			overflow: hidden;
+		}
+		li span.type {
+			float: left;
+			display: block;
+			width: 15%;
 			color: #f94c00;
+		}
+		li span.address {
+			float: right;
+			display: block;
+			padding-right: 15px;
+			width: 80%;
 		}
 	}
 	.detail_wrap {
@@ -151,4 +169,9 @@
 	.btn.confirm {
 		margin-left: 5px;
 	}
+}
+.pop_footer.complete {
+	margin-top: 42px;
+	text-align: right;
+	margin-right: -60px;
 }

@@ -38,7 +38,10 @@ $(document).ready(function(){
 		e.preventDefault();
 		$(this).parent().parent().removeClass('on');
 	});
-})
+	$('.link.form_move').on('click', function(e){
+		$('body, html').scrollTop($('.request').offset().top);
+	});
+});
 </script>
 </head>
 
@@ -99,9 +102,6 @@ $(document).ready(function(){
 			<div class="exp">현재 수거 대기건수</div>
 		</li>
 		<li class="item">
-			<img src="./img/icon_info_03.png" alt="" width="108" height="104">
-			<div class="num">543,000원</div>
-			<div class="exp">최고 판매액</div>
 		</li>
 	</ul>
 </div>
@@ -111,18 +111,18 @@ $(document).ready(function(){
 	<h2 class="blind">수거 진행 방식 안내</h2>
 	<div class="guide g1">
 		<h3 class="title">수거 진행 방식은 이렇습니다.</h3>
-		<p class="sub_title">간편접수, 해피콜 연락, 방문수거후 입금</p>
-		<img src="./img/guide_01.png" alt="01.수거접수:이름, 전화번호, 주소만 입력하고 제출하면 끝 02.해피콜 연락드림:발신번호 02-1522-8077번호로 순차적으로 연락드립니다. 03.방문수거후 입금: 집으로 방문한 픽맨이 일괄수거 및 바로입금 해드립니다." width="1120" height="325">
+		<p class="sub_title">간편접수, 해피콜 연락, 방문수거, 현장입금</p>
+		<img src="./img/guide_01.png" alt="01.수거접수:이름, 전화번호, 주소만 입력하고 제출하면 끝 02.해피콜 연락드림:발신번호 02-1522-8077번호로 순차적으로 연락드립니다. 03.방문수거후 입금: 집으로 방문한 픽맨이 일괄수거 및 바로입금 해드립니다." width="1119" height="325">
 	</div>
 	<div class="guide g2">
 		<h3 class="title">방문 수거 가능지역과 수거비용</h3>
 		<p class="sub_title">방문수거 가능지역</p>
-		<img src="./img/guide_02.png" alt="01.수거지역:서울시 전지역, 성남시, 하남시, 용인시, 02.무료수거:총 책정가 5만원 이상, 03.수거비 만원:총 책정가 5만원 미만" width="1120" height="269">
+		<img src="./img/guide_02.png" alt="01.수거지역:서울시 전지역, 성남시, 하남시, 용인시, 02.무료수거:총 책정가 5만원 이상, 03.수거비 만원:총 책정가 5만원 미만" width="1119" height="269">
 	</div>
 	<div class="guide g3">
 		<h3 class="title">수거 가능 품목 예시</h3>
 		<p class="sub_title">장난감, 출산용품, 육아용품, 도서,  유모차, <span class="point_txt_01">주방가전, 문화 상품권</span></p>
-		<img src="./img/guide_03.png" alt="장난감, 출산, 육아, 도서, 유모차, 주방가전, 문화상품권" width="1120" height="210">
+		<img src="./img/guide_03.png" alt="장난감, 출산, 육아, 도서, 유모차, 주방가전, 문화상품권" width="1119" height="210">
 	</div>
 </div>
 
@@ -131,20 +131,23 @@ $(document).ready(function(){
 	<h2 class="title">픽셀 대표 매입가</h2>
 	<ul class="goods_wrap">
 		<li class="item">
-			<img src="./img/goods_01.jpg" alt="보행기:4,000원~10,000원, 피셔프라이스 부스터:3,000원~8,000원, 빼그빼레고 유아식탁의자:60,000원~100,000원, 치코 폴리 식탁의자:5,000원~15,000원" width="1120" height="445">
+			<img src="./img/goods_01.jpg" alt="타이니러브 수더앤그루브 모빌:5,000원~20,000원, 브이텍 걸음마 학습기:5,000원~20,000원, 엑서쏘서 트리플펀 아마존:10,000원~45,000원, 피셔프라이스 러닝홈:10,000원~40,000원" width="1119" height="445">
 		</li>
 		<li class="item">
-			<img src="./img/goods_02.jpg" alt="스마트트라이크 4in1 자전거:5,000원~15,000원, 시밀레 S2 플러스:15,000원~40,000원, 뉴나바운서:40,000원~70,000원, 구름빵베이비룸: 5,000원~30,000원" width="1120" height="445">
+			<img src="./img/goods_02.jpg" alt="맥포머스:20,000원~80,000원, 모디 자전거 2016:10,000원~40,000원, 에르고 4포지션 360캐리어:20,000원~40,000원, 포그내 올가 힙시트: 15,000원~35,000원" width="1119" height="445">
 		</li>
 		<li class="item">
-			<img src="./img/goods_03.jpg" alt="수더앤그루브모빌:5,000원~20,000원, 스토케 V3 익스플로리: 150,000원~250,000원, 잉글레시나 트립 유모차(2015): 30,000원~60,000원, 리안 스핀 LX 2015: 5,000원~10,000원" width="1120" height="445">
+			<img src="./img/goods_03.jpg" alt="유팡 소독기:5,000원~35,000원, 시밀레 S2+: 20,000원~40,000원, 뉴나 바운서:40,000원~70,000원, 구름빵 베이비룸:5,000원~30,000원" width="1119" height="445">
 		</li>
 		<li class="item">
-			<img src="./img/goods_04.jpg" alt="도서단권:0원~3,000원, 베이비리그튼튼영어:60,000원~100,000원, 첫걸음 아기 정보 그림책:10,000원~30,000원, 마술피리 그림책 꼬마:30,000원~60,000원" width="1120" height="445">
+			<img src="./img/goods_04.jpg" alt="애플비 입체 토이북:30,000원~50,000원, 블루래빗 팝업으로 만나는 세계 명작 동화:3,000원~10,000원, 프뢰벨 영아 테마 동화:40,000원~70,000원, 도서단권:0원~2,000원" width="1119" height="445">
 		</li>
 		<li class="item">
-			<img src="./img/goods_05.jpg" alt="우리아기 첫 토이북:40,000원~70,000원, 호롱불옛이야기:5,000원~10,000원, 유팡소독기:6,400원~35,000원, 쿠첸무선전기포트:5,000원~10,000원" width="1120" height="445">
-		</li>					
+			<img src="./img/goods_05.jpg" alt="스토케 익스플로리 V3:20,000원~200,000원, 에어자이어LT 초경량 유모차:20,000원~70,000원, 스핀LX 디럭스 유모차:40,000원~110,000원, 베이비무브 쿡마스터:10,000원~30,000원" width="1119" height="445">
+		</li>
+		<li class="item">
+			<img src="./img/goods_06.jpg" alt="네스카페 돌체구스토:10,000원~30,000원, 하우쎈 침구 살균 청소기:20,000원~90,000원, 리큅 식품건조기:15,000원~30,000원, 몰펀:20,000원~40,000원" width="1119" height="445">
+		</li>	
 	</ul>
 	<div class="more_wrap">
 		<a href="" class="link open">펼쳐보기</a>
@@ -155,7 +158,7 @@ $(document).ready(function(){
 
 <div class="attention">
 	<h2 class="blind">주의사항</h2>
-	<img src="./img/attention.png" alt="주의사항 1.고장, 파손, 오염된 상품은 매입불가  현장에서 발견되지 못한 고장, 파손 오염된 상품은 매입 후에라도 취소될 수 있습니다. 2.소량의 물품은 무료 방문 매입 불가 총 매입가 5만원 미만: 수거비로 1만원을 차감합니다. 3.수거 불가능한 품목들 의류, 잡화, 카시트, 인형, 가구" width="1120" height="476">
+	<img src="./img/attention.png" alt="주의사항 1.고장, 파손, 오염된 상품은 매입불가  현장에서 발견되지 못한 고장, 파손 오염된 상품은 매입 후에라도 취소될 수 있습니다. 2.소량의 물품은 무료 방문 매입 불가 총 매입가 5만원 미만: 수거비로 1만원을 차감합니다. 3.수거 불가능한 품목들 의류, 잡화, 카시트, 인형, 가구" width="1119" height="330">
 </div>
 
 <!-- [D] 펼치기 선택 시 'on' 클래스 추가 바람 -->
@@ -165,16 +168,10 @@ $(document).ready(function(){
 	<dl>
 		<dt>질문: 가격 책정은 누가 하나요?</dt>
 		<dd>답변: 상품의 상태와 인기도를 반영하여 픽셀이 직접 책정해드립니다.</dd>
-		<dt>질문: 가격이 5만원 이하일 경우는 수거가 안되나요?</dt>
-		<dd>답변: 책정가 5만원 이하일 경우, 출장비 1만원이 부과됩니다. 픽셀은 다양한 품목을 일괄로 매입해드리기 때문에 한 번에 판매하시는 방법을 추천해드립니다.</dd>	
-		<dt>질문: 픽맨이 방문했을 때 현장에서 취소해도 되나요? 이때 불이익이 있나요?</dt>
-		<dd>답변: 현장취소는 가능하나, 패널티로 3개월간 방문매입 신청이 불가합니다. 방문취소는 영업일 기준 최소 방문 2일 전에 해주세요 :)</dd>
-		<dt>질문: 가격 책정 후 일부 상품만 빼도 되나요?</dt>
-		<dd>답변: 일부 제품 판매 취소시, 취소한 제품뿐만 아니라 기존 제품들의 매입가도 하락되오니 참고해주세요.</dd>	
 		<dt>질문: 수거시 상품을 분리해두나요 조립해두나요?</dt>
-		<dd>답변: 수거시 상품 확인을 위해 포장은 하지마시고 편하신 방법으로 놓아주시고 빠진 부속품은 없는지 확인해주세요.</dd>	
+		<dd>답변: 상품 확인을 위해 포장은 하지 마시고 편하신 방법으로 놓아주시고 빠진 부속품은 없는지 확인해주세요.</dd>	
 		<dt>질문: 세척해둬야 하나요?</dt>
-		<dd>답변: 세척하지 않으셔도 됩니다. 하지만 외관 상태는 가격 책정에 반영되며 심한 오염이 있을시 매입이 불가합니다.</dd>	
+		<dd>답변: 세척하지 않으셔도 됩니다. 하지만 외관 상태는 가격 책정에 반영되며 심한 오염이 있을 시 매입이 불가합니다.</dd>
 		<dt>질문: 입금은 언제 되나요?</dt>
 		<dd>답변: 방문 당일 현장에서 입금해드립니다.</dd>									
 	</dl>
@@ -185,7 +182,7 @@ $(document).ready(function(){
 </div>
 
 
-<div class="request">
+<div class="request" id="request_form">
 	<h2 class="title">수거 신청하기</h2>
 	<form action="#" method="get">
 		<fieldset>
@@ -203,12 +200,6 @@ $(document).ready(function(){
 				<div class="input_wrap"> 
 					<label class="blind">주소입력</label>
 					<input type="text" name="address" class="input" placeholder="주소입력"/>
-				</div>
-				<div class="input_wrap agree">
-					<label class="agree_txt" for="checkbox">
-					<input type="checkbox" id="checkbox" name="agree" class="checkbox blind"/>
-					<span class="icon_checkbox"></span>총 책정가 5만원 이하시 수거비를 받는데 동의 하시겠습니까?
-					</label>
 				</div>
 				<h3 class="title_form">*선택 항목</h3>
 				<div class="input_wrap">
@@ -231,13 +222,9 @@ $(document).ready(function(){
 </div>
 <!-- //content inner-->
 
-</div>
-<!-- //content -->
-
-
 <div class="footer">
 	<div class="footer_inner">
-		<img src="./img/footer_address.png" width="560" height="205" alt="">
+		<img src="./img/footer_address.png" width="1120" height="205" alt="">
 		<h2 class="blind">고객문의</h2>
 		<ul class="blind">
 			<li>운영시간 : 오전10시 ~ 오후6시 (월~금)</li>
@@ -257,11 +244,14 @@ $(document).ready(function(){
 	</div>
 </div>
 
+</div>
+<!-- //content -->
+
 
 <!-- [D] 화면 사이즈 강제 축소 : 67%-->
-<div class="top_slide_wrap"  style="zoom:0.67">
-	<a href="#" class="link"><img src="./img/slide_go_pickup.jpg" alt="PICKSELL facebook" width="225" height="247"><span class="blind">수거신청 바로가기</span></a>
-	<a href="#" class="link"><img src="./img/slide_app_down.jpg" alt="PICKSELL facebook" width="225" height="247"><span class="blind">수거신청 바로가기</span></a>
+<div class="top_slide_wrap" style="zoom:0.67">
+	<a class="link form_move"><img src="./img/slide_go_pickup.jpg" alt="PICKSELL facebook" width="225" height="247"><span class="blind">수거신청 바로가기</span></a>
+	<a href="#" class="link"><img src="./img/slide_app_down.jpg" alt="PICKSELL facebook" width="225" height="247"><span class="blind">앱 다운로드</span></a>
 </div>
 
 
