@@ -1,0 +1,157 @@
+<div class="header-inner">
+    <!-- top banner -->
+    <!-- [D] 배너 교체 시 background-color 값 세팅 바람 -->
+    <div class="top_banner" style="background-color:#ff428b">
+        <a href="#"><img src="./assets/images/banner/banner_appdown.png" alt="픽셀앱 다운로드"></a>
+        <a href="#" class="close"><span class="blind">닫기</span></a>
+        <script>
+            $(".top_banner .close").on("click", function($e){                   
+                $e.preventDefault();       
+                $(".wrap").removeClass('top_banner_show');
+            });                  
+        </script>
+    </div>
+     <!-- //top banner -->
+   <!-- header top -->
+    <div class="top">
+        <div class="top-left">
+            <ul class="btn_list">
+                <li><a href="#" class="icon top_menu" title="메뉴보기"><i></i></a></li>
+                <li><a href="#" class="icon top_search" title="검색"><i></i></a></li>
+            </ul>
+        </div>
+
+        <div class="top-center">
+            <a href="./main.html" class="icon top_logo"><i></i></a>
+        </div>
+
+        <div class="top-right">
+            <ul class="btn_list">
+                <li>
+                    <a href="#" class="icon top_pick" title="pick"><i class=""></i>
+                    <div class="alert">
+                        <span class="">방문수거 대기 <em>30</em>명</span>
+                    </div>
+                </a> 
+                </li>
+                <li><a href="#" class="icon top_basket" title="장바구니"><i class=""></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //header top -->
+
+    <!-- left menu -->
+    <nav>
+        <div class="banner">
+            <p class="text">
+                <a href="#" >방문 수거 신청 하기</a>
+                <span>현재 방문수거 대기중 <em>35</em>명</span>
+            </p>                        
+            <p class="img"><img src="./assets/images/common/nav_banner-bg.png" alt="달리는 곰"></p>
+        </div>
+        <ul class="dep1-list">
+            <li><a href="#" class="link"><em>이동준님</em> 로그아웃</a></li>
+            <li><a href="#" class="ac">카테고리</a>
+                <ul class="dep2-list">
+                    <li class="icon ctg-1"><a href="#" class="link">픽셀홈</a></li>
+                    <li class="icon ctg-0"><a href="#" class="link">육아용품</a></li>                    
+                    <li class="icon ctg-2"><a href="#" class="link">장난감</a></li>
+                    <li class="icon ctg-3"><a href="#" class="link">유모차,카시트</a></li>
+                    <li class="icon ctg-4"><a href="#" class="link">도서</a></li>
+                    <li class="icon ctg-5"><a href="#" class="link">생활,주방</a></li>
+                    <li class="icon ctg-6"><a href="#" class="link">디지털</a></li>
+                    <li class="icon ctg-7"><a href="#" class="link">쿠폰모음</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="link">내정보 변경</a></li>
+            <li><a href="#" class="link">알림</a></li>
+            <li><a href="#" class="link">장바구니</a></li>
+            <li><a href="#" class="link">구매목록</a></li>
+            <li><a href="#" class="link">방문수거 관리목록</a></li>
+            <li><a href="#" class="link">보유픽셀 <span class="price"><em>500,000</em> 픽셀</span></a></li>
+            <li><a href="#" class="link">내 쿠폰함</a></li>
+            <li><a href="#" class="link">친구추천</a></li>
+            <li><a href="#" class="link">픽셀 공식 네이버 블로그</a></li>
+            <li><a href="#" class="link">리뷰쓰기 </a></li>
+        </ul>
+    </nav>
+    <!-- // left menu -->
+    <div class="dim" style=""></div>
+
+    <div class="bottom-fixed">
+        <div class="controll-box">
+            <a href="#" class="btn-back"></a>
+            <a href="" class="btn-top"></a>
+        </div>
+        <div class="basket-box">
+            <div class="basket">
+                <a href="#" class="basket-btn" >장바구니 담기</a>
+                <a href="#" class="buy-btn" >결제하기</a>
+            </div>      
+        </div>
+    </div>
+
+
+    <script>
+
+        /* ========= 메뉴보기 ========= */
+        $(".top-left .top_menu").on("click",function(){                         
+            $("#wrap").addClass("fixed");
+            $("body").css({overflowY:"hidden"});
+
+            $(".header-inner nav").addClass("on");
+            $("#header .dim").fadeIn(200);
+        });	
+        $("#header .dim").on("click",function(){ 
+            $("#wrap").removeClass("fixed");
+            $("body").css({overflowY:"auto"});
+
+            $(".header-inner nav").removeClass("on");
+            $("#header .dim").hide(100);
+
+            // 2뎁스 메뉴 초기 화
+            dep2_toggle.toggleAllSet(false); 
+            $(".dep1-list>li>").removeClass("on");
+            $(".dep1-list>li>a.ac").siblings("ul").slideUp(200);
+        });
+        
+        
+        /* ========= 2뎁스 메뉴 펼치기 ========= */
+        var dep2_toggle;
+        dep2_toggle =  $(".dep1-list li>a.ac").trpToggleBtn( 
+            function($this){
+                $this.parent("li").addClass("on");
+                $this.siblings("ul").slideDown();
+            },function($this){
+                $this.parent("li").removeClass("on");
+                $this.siblings("ul").slideUp(200);
+            }
+        );
+        
+        
+        /* ========= alert : 현재 대기 건수 ========= */
+        setTimeout( function(){ $(".top-right .alert").fadeOut(300); }, 3000 )
+        
+        
+        /* ========= bottom-fixed 버튼 ========= */
+        $(".bottom-fixed .btn-back").on("click", function($e){
+            $e.preventDefault(); history.back();
+        })
+        $(".bottom-fixed .btn-top").on("click", function($e){
+            $e.preventDefault(); $( 'html, body' ).animate( { scrollTop: 0 }, 500 );
+        })
+        
+        
+        /* ========= 하단 바스킷 버튼 ========= */
+        $(".bottom-fixed .basket-box .basket-btn").on("click", function(){
+            if( $(this).hasClass("on")){
+                $(this).removeClass("on");
+            }else{
+                $(this).addClass("on");
+            }
+        })
+            
+
+    </script>
+
+</div>

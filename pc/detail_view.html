@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>상품 상세 보기</title>    
+    <link rel="stylesheet" href="./assets/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="./assets/css/common.min.css">
+    <!--[if lt IE 9]>
+        <script src="./js/library/html5shiv.js" 	type="text/javascript" charset="utf-8"></script>
+        <script src="./js/library/respond.min.js" 	type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+    <script src="./assets/js/library/jquery.min.js"></script>
+    <script src="./assets/js/library/jquerylibrary.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>  
+</head>
+<body>    
+    
+    <!-- 하다 바스킷보기 -->
+    <div id="wrap" class="wrap fooerbasket-show" >
+        <!-- header -->  
+        <div id="header"></div>
+        <!-- //header -->  
+        
+        <!-- contents -->  
+        <div id="contents">
+                      
+            <!-- 상세 보기 키비주얼 겔러리   -->
+            <div class="detail_kv">
+                <div class="detail_gallery">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="./assets/images/products/pro640_644.jpg" alt="1"></li>
+                        <li class="swiper-slide"><img src="./assets/images/products/pro640_644.jpg" alt="2"></li>
+                        <li class="swiper-slide"><img src="./assets/images/products/pro640_644.jpg" alt="3"></li>
+                        <li class="swiper-slide"><img src="./assets/images/products/pro640_644.jpg" alt="4"></li>
+                        <li class="swiper-slide"><img src="./assets/images/products/pro640_644.jpg" alt="5"></li>
+                        <li class="swiper-slide"><img src="./assets/images/products/pro640_644.jpg" alt="6"></li>
+                        <li class="swiper-slide"><img src="./assets/images/products/pro640_644.jpg" alt="7"></li>
+                        <li class="swiper-slide"><img src="./assets/images/products/pro640_644.jpg" alt="8"></li>
+                    </ul>
+                    <div class="pagination-wrap" tabindex="0">
+                        <div class="pagination"></div>
+                    </div>              
+                </div>   
+                <div class="thumnail-wrap">
+                    <ul class="thumbnail-list">
+                        <li class="on"><a href="#"><img src="./assets/images/products/pro120_120s.jpg" alt="1"></a></li>
+                        <li><a href="#"><img src="./assets/images/products/pro120_120s.jpg" alt="2"></a></li>
+                        <li><a href="#"><img src="./assets/images/products/pro120_120s.jpg" alt="3"></a></li>
+                        <li><a href="#"><img src="./assets/images/products/pro120_120s.jpg" alt="4"></a></li>
+                        <li><a href="#"><img src="./assets/images/products/pro120_120s.jpg" alt="5"></a></li>
+                        <li><a href="#"><img src="./assets/images/products/pro120_120s.jpg" alt="6"></a></li>
+                        <li><a href="#"><img src="./assets/images/products/pro120_120s.jpg" alt="7"></a></li>
+                        <li><a href="#"><img src="./assets/images/products/pro120_120s.jpg" alt="8"></a></li>
+                    </ul>
+                </div> 
+                <script>
+                    var dekbIndex = 0;	
+                    var dekvSwiper = new Swiper('.detail_gallery',{    
+                        loop: true,		
+                        threshold: 30,								// 수치보다 작으면 슬라이드를 안한다.
+                        pagination: '.pagination',
+                        onSlideChangeEnd: function(swiper){			// 움직임이 끝나면 실행
+
+                            dekbIndex = $(".detail_gallery .swiper-slide-active").attr("data-swiper-slide-index");
+                            $(".thumbnail-list li").removeClass("on");
+                            $(".thumbnail-list li").eq(dekbIndex).addClass("on");
+                        }
+                    })
+
+
+                    // 썸네일  컨트롤
+                    $(".thumbnail-list li a").on('click', function(){							
+                        var _index = $(this).parent().index();          
+                        $(".thumbnail-list li").removeClass("on");
+                        $(".thumbnail-list li").eq(_index).addClass("on");
+
+                        if(dekvSwiper.loopedSlides){_index = _index +1;}
+                        dekvSwiper.slideTo(_index ,700, function(){});
+                      
+                        return false;
+                    })
+                </script>
+            </div>
+            
+            
+            <!-- 제품 정보 -->
+            <div class="detail_desc-wrap">
+                <div class="tit">제목</div>
+                <div class="price">가격</div>
+                <div class="code">상품번호 <em>123456</em></div>
+                <ul class="sns-list">
+                    <li class="other"><a href="#"></a></li>
+                    <li class="kakao"><a href="#"></a></li>
+                    <li class="facebook"><a href="#"></a></li>                    
+                </ul>
+            </div>
+            
+            
+            <!-- tab 메뉴  -->
+            <div class="detail_tap-wrap" id="detail_tap">
+                <div class="article-wrap">
+                   
+                   
+                    <ul class="tabs">
+                        <li><a href="#first" class="btn btn1">상품설명</a>
+                            <div id="first" class="cons" >
+                                <div class="components">
+                                    <p>
+                                        [구성품] <br>
+                                        피셔프라이스 인펀트 투 토들러 락커 바운서 블루 그린 
+                                    </p>
+                                    <p>
+                                        [추가정보] <br>
+                                        의자 시트부분에 생활얼룩이 있음. <br>
+                                        모빌에 약간의 생활흠집이 있음. 
+                                    </p>
+                                </div>
+                                <span class="bar"></span>
+                                <div class="detal_info-wrap">
+                                    <h2>상품 정보</h2>
+                                    <ul class="info-list">
+                                        <li>
+                                            <div class="label"><span>브랜드</span></div>
+                                            <div class="desc"><span>지나월드</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="label"><span>상품상태</span></div>
+                                            <div class="desc">
+                                                <!--[D] 활성화 'on' 클래스 추가-->
+                                                <ul class="state-list">
+                                                    <li class="l4 on">최상</li>
+                                                    <li class="l3">좋음</li>
+                                                    <li class="l2">보통</li>
+                                                    <li class="l1">사용감많음</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="label"><span>사용기간</span></div>
+                                            <div class="desc"><span>1년 이하</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="label"><span>상품태그</span></div>
+                                            <div class="desc"><span>#지나월드</span></div>
+                                        </li>
+                                        <li>
+                                            <div class="label"><span>배송정보</span></div>
+                                            <div class="desc"><span>2,5000원 (50,000원 이상 구매 시 무료배송)</span></div>
+                                        </li>
+                                    </ul>
+                                    <div class="img">
+                                        <span><img src="./assets/images/products/pro608_608.jpg" alt=""></span>
+                                        <span><img src="./assets/images/products/pro608_608.jpg" alt=""></span>
+                                        <span><img src="./assets/images/products/pro608_608.jpg" alt=""></span>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </li>
+                        <li><a href="#secound" class="btn btn2"> 유의사항</a>
+                            <div id="secound"  class="cons" >
+                                <div class="components">
+                                    <h2>배송정보</h2>
+                                    <ul class="dl-list">
+                                        <li>
+                                            <span class="tit">[배송방법] </span>
+                                            <span class="con">배송은 당일기준 오전 10시 일괄배송 으로 진행</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">[배송비용] </span>
+                                            <span class="con">
+                                                50,000원 이상 무료배송 <br>
+                                                50,000원 미만 시, 선불 2,500원</span>
+                                        </li>
+                                        <li>
+                                            <span class="tit">[추가비용] </span>
+                                            <span class="con">
+                                                도서상간 및 일부 지역 추가 비용 발생 <br>
+                                                (제주지역:3,000원, 제주외지역:추가비용없음)
+                                            </span>
+                                        </li>
+                                    </ul>                         
+                                </div>
+                                <span class="bar"></span>
+                                <div class="components">
+                                    <h2>교환/반품안내</h2>
+                                    <ol class="num">
+                                        <li>단순 변심으로 인한 환불은 불가합니다.</li>
+                                        <li>구매후 7일 이후는 환불이 불가 합니다.</li>
+                                        <li>부품 누락이나 파손등도 7일 이내에 연락을 주셔야 환불이 가능합니다.</li>
+                                        <li>제품의 색상은 실제와 다소 차이가 있을 수 있습니다.</li>
+                                        <li>리퍼상품은 새상품이 아닙니다. 리퍼는 포장박스 파손이나 기스등이 있는 반품상품입니다.</li>
+                                    </ol>
+                                </div>
+                                <span class="bar"></span>
+                                <div class="components">
+                                    <h2>고객문의</h2>
+                                    <p>
+                                        운영시간 : 10시~오후6시(월~금) <br>
+                                        전화번호 : <a href="tel:02-1522-8077">02-1522-8077</a>   
+                                    </p>
+                                    <p>
+                                        사업자등록번호: 134-87-30318 <br>
+                                        통신판매업신고: 제2016-서울송파-0549호
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="#third" class="btn btn3">문의사항</a>
+                            <div id="third"  class="cons" >
+                                <h2>상품 문의하기</h2>
+                                <!-- 상품문의하기 -->
+                                <div class="question-wrap">
+                                    <div class="question-inner">
+                                        <textarea rows="4" cols="50" name="question" id="question" class="question" autocapitalize="off" autocorrect="off" placeholder="문의내용을 입력해주세요" ></textarea>
+                                        <div class="btn-box">
+                                            <a href="#" class="save-btn" >등록</a>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        $("textarea.question").on("focus",function(){
+                                            $(this).parent(".question-inner").addClass("on");
+                                        })
+
+                                        $("textarea.question").on("blur", function(){
+                                            if( $(this).val() == "" ){
+                                                $(this).parent(".question-inner").removeClass("on");
+                                            }
+                                        })
+                                    </script>
+                                </div>
+                                
+                                <!-- Q&A -->
+                                <div class="qna-wrap">
+                                    <div class="question-box">
+                                        <div class="question_head">
+                                            <div class="area_left">
+                                                <span class="qu">문의</span>
+                                                <span class="us">지후 아빠</span>
+                                            </div>
+                                            <div class="area_right">
+                                                <a href="#" class="del">삭제하기</a><em></em>
+                                                <span class="date">2017.01.09</span>
+                                            </div>
+                                        </div>
+                                        <div class="question_body">
+                                            언제쯤 도착하나요? 사이즈가 어떻게 되나요?언제쯤 도
+                                            사이즈가 어떻게 되나요?
+                                        </div>
+                                    </div>
+                                    <div class="answer-box">
+                                        <span class="an">답변</span>
+                                        <span class="an_txt">
+                                            내일 도착 예정입니다. 사이즈는 45cm입니다.
+                                        </span>
+                                    </div>    
+                                </div>
+                                <!-- Q&A -->
+                                <div class="qna-wrap">
+                                    <div class="question-box">
+                                        <div class="question_head">
+                                            <div class="area_left">
+                                                <span class="qu">문의</span>
+                                                <span class="us">지후 아빠</span>
+                                            </div>
+                                            <div class="area_right">
+                                                <a href="#" class="del">삭제하기</a><em></em>
+                                                <span class="date">2017.01.09</span>
+                                            </div>
+                                        </div>
+                                        <div class="question_body">
+                                            언제쯤 도착하나요? 사이즈가 어떻게 되나요?언제쯤 도
+                                            사이즈가 어떻게 되나요?
+                                        </div>
+                                    </div>
+                                    <div class="answer-box">
+                                        <span class="an">답변</span>
+                                        <span class="an_txt">
+                                            내일 도착 예정입니다. 사이즈는 45cm입니다.
+                                        </span>
+                                    </div>    
+                                </div>
+                                
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
+            </div>
+             <!-- tab 메뉴  -->
+        
+            
+        </div>
+        <!-- //contents -->  
+        
+        <!-- footer -->  
+        <div id="footer"></div>
+        <!-- //footer -->  
+        
+    </div>
+        
+        
+</body>
+</html>

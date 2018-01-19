@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>방문수거 관리목록</title>    
+    <link rel="stylesheet" href="./assets/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="./assets/css/common.min.css">
+    <!--[if lt IE 9]>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="./assets/js/library/jquery.min.js"></script>
+    <script src="./assets/js/library/jquerylibrary.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>
+</head>
+<body>
+<div id="wrap" class="wrap">
+   
+    <!-- header -->  
+    <div id="header"></div>
+    <!-- //header -->  
+        
+        
+    <!-- contents -->            
+    <div id="contents">
+        <div class="article-wrap mb40">
+        
+        <div class="pickup_list">
+            <h2 class="title">현재 방문수거 진행중</h2>
+            <div class="box_btn"><a href="#">방문수거 취소하기</a></div>
+        </div>
+        
+        <!-- line-list pickup_list -->
+        <ul class="line-list pickup_list">
+           
+            <!-- [D] 배송 시작 시 'on' 클래스 추가 -->
+            <li class="on">
+                <div class="item icon1">
+                    <h3 class="blind">방문수거 신청</h3>
+
+                    <div class="desc">
+                        <div class="desc_inner">
+                            <div class="tit">방문수거를 신청하셨습니다. 해피콜 <a href="#" tel:02-1522-8077><em class="b u">02-1522-8077</em></a> 로 연락드리겠습니다.</div>
+                            <div class="info"><em>2017.01.05 AM 03:55</em></div>
+                        </div>
+                        <div class="before_txt">방문수거 신청전 입니다.</div>
+                    </div>
+                </div>  
+            </li>
+            
+            <!-- [D] 진행 중 뱃지 표시 없음 : 'on' , 해피콜 시작 시 뱃지 표시 있음: 'on num' 클래스 추가  -->            
+            <li class="on num">
+                <div class="item icon2">
+                    <h3 class="blind">부재중 연락</h3>
+                     
+                    <div class="desc">
+                        <div class="desc_inner">
+                            <div class="tit">연락을 받으시지 않으셨습니다. 다시 연락드리도록 하겠습니다.</div>
+                            <div class="info"><em>2017.01.05 AM 03:55</em>
+                            </div>
+                        </div>
+                        <div class="before_txt">아직 해피콜전 입니다.</div>
+                    </div>
+                    
+                    <!-- [D] 뱃지 -->
+                    <div class="num"><em>3</em></div>
+                </div>  
+            </li>
+            <li>
+                <div class="item icon3">
+                    <h3 class="blind">수거 완료 금액</h3>
+                    
+                    <div class="desc">
+                        <div class="desc_inner">
+                            <div class="tit">50,000원 받으셨습니다. 문의나 의견 있으시면 <a href="http://plus.kakao.com/home/@픽셀"><em class="b">작성</em></a>해 주세요.</div>
+                            <div class="info"><em>2017.01.05 AM 03:55</em></div>
+                        </div>
+                        <div class="before_txt">아직 방문수거전 입니다.</div>
+                    </div>
+                </div>  
+            </li>
+        </ul>
+        <!-- //line-list pickup_list -->            
+        
+        </div>  
+
+       <div class="article-wrap h_border mb50">
+        <div class="pickup_list">       
+            <h2 class="title">이전 방문수거 목록</h2>
+        </div>
+        
+        <!-- line-list pickup_list -->
+        <ul class="line-list pickup_list bottom">
+           
+            <!-- [D] 취소된 수거일 경우 'cancel' 클래스 추가 -->
+            <li>
+                <div class="item">
+                    <h3 class="blind">방문수거 신청</h3>
+
+                    <div class="desc">
+                        <div class="desc_inner">
+                            <div class="tit">방문수거로 50,000원을 받으셨습니다. 공유해주셔서 감사합니다.</div>
+                            <div class="info"><em>2017.01.05 AM 03:55</em></div>
+                        </div>
+                    </div>
+                    <div class="box_btn"><em class="finish">완료됨</em></div>
+                </div>  
+            </li>
+            <li class="cancel">
+                <div class="item">
+                    <h3 class="blind">부재중 연락</h3>
+                     
+                    <div class="desc">
+                        <div class="desc_inner">
+                            <div class="tit">아쉽게 방문수거를 취소하셨습니다. 다음에 이용해주시면 감사하겠습니다.</div>
+                            <div class="info"><em>2017.01.05 AM 03:55</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_btn"><em class="cancel">수거취소함</em></div>
+                </div>  
+            </li>
+            <li>
+                <div class="item">
+                    <h3 class="blind">방문수거 신청</h3>
+
+                    <div class="desc">
+                        <div class="desc_inner">
+                            <div class="tit">방문수거로 50,000원을 받으셨습니다. 공유해주셔서 감사합니다.</div>
+                            <div class="info"><em>2017.01.05 AM 03:55</em></div>
+                        </div>
+                    </div>
+                    <div class="box_btn"><em class="finish">완료됨</em></div>
+                </div>  
+            </li>          
+        </ul>
+        <!-- //line-list pickup_list -->                            
+            
+        </div>
+    </div>
+    <!-- //contents -->  
+    
+    
+    <!-- footer -->  
+    <div id="footer"></div>
+    <!-- //footer -->  
+    
+</div>
+   
+</body>
+</html>

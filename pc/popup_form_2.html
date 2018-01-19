@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>폼 팝업</title>
+    <link rel="stylesheet" href="./assets/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="./assets/css/common.min.css">
+    <!--[if lt IE 9]>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="./assets/js/library/jquery.min.js"></script>
+    <script src="./assets/js/library/jquerylibrary.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+
+        <!-- header -->
+        <div id="header"></div>
+        <!-- //header -->
+
+
+        <!-- contents -->
+        <div id="contents">
+        </div>
+        <!-- //contents -->
+
+
+        <!-- footer -->
+        <div id="footer"></div>
+        <!-- //footer -->
+
+
+    </div>
+
+    <!-- popup -->
+    <!--/* popup_address - .pop_address*/-->
+    <div id="popup_add-wrap" class="tr popupfixed-wrap">
+        <div class="popup-dim"></div>
+        <div class="popup-vertical">
+            <div class="popup-layer option">
+
+                <div id="picksell-collection-popup-mobile">
+                    <div id="address-search-popup">
+                        <div class="request-wrap">
+                            <a class="btn_close" href="#"><img class="close-popup" src="./assets/images/popup/close_1.png"></a>
+                            <h2 class="title">주소 검색</h2>
+                            <form action="#" method="get">
+                                <div class="request_form">
+                                    <h3 class="title_form">도로명, 건물명, 지번에 대한 통합검색이 가능합니다.</h3>
+                                    <div class="input_wrap">
+                                        <label class="blind">주소입력</label>
+                                        <input type="text" class="form-control address-input" name="tel" placeholder="수거 받을 주소 입력" />
+                                        <img class="remove-img" src="./assets/images/popup/close_2.png" alt="remove-txt">
+                                    </div>
+                                    <div class="confirm auth">
+                                        <input type="submit" value="검색" class="btn auth-btn submit-btn">
+                                    </div>
+                                </div>
+                                <div class="address-description">
+                                    <ul class="description-list">
+                                        <li>*&nbsp;&nbsp;도로명, 건물명, 지번에 대해 통합검색이 가능합니다.</li>
+                                        <li>-&nbsp;&nbsp;도로명 <span class="gray">(예: 반포대로)</span></li>
+                                        <li>-&nbsp;&nbsp;도로명 + 건물번호 <span class="gray">(예: 반포로 58)</span></li>
+                                        <li>-&nbsp;&nbsp;동/읍/면 <span class="gray">(예: 삼성동 534, 화도읍 220, 양지면 545, 마석우리 28)</span></li>
+                                        <li>-&nbsp;&nbsp;건물명(아파트명) <span class="gray">(예: 국립중앙박물관)</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="confirm half-confirm">
+                                    <input type="submit" value="취소" class="btn submit-btn cancel-btn">
+                                    <input type="submit" value="확인" class="btn submit-btn confirm-btm">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- /* popup_address_search_list */-->
+    <div id="popup_add_list-wrap" class="tr popupfixed-wrap">
+        <div class="popup-dim"></div>
+        <div class="popup-vertical">
+            <div class="popup-layer option">
+
+                <div id="picksell-collection-popup-mobile">
+                    <div id="address-list-success-popup">
+                        <div class="request-wrap">
+                            <a class="btn_close" href="#"><img class="close-popup" src="./assets/images/popup/close_1.png"></a>
+                            <h2 class="title">주소 검색</h2>
+                            <form action="#" method="get">
+                                <div class="request_form">
+                                    <h3 class="title_form">도로명, 건물명, 지번에 대한 통합검색이 가능합니다.</h3>
+                                    <div class="input_wrap">
+                                        <label class="blind">주소입력</label>
+                                        <input type="text" class="form-control address-input" name="tel" placeholder="수거 받을 주소 입력" />
+                                        <img class="remove-img" src="./assets/images/popup/close_2.png" alt="remove-txt">
+                                    </div>
+                                </div>
+                                <!-- 주소가 보이는 부분 -->
+                                <div class="address-wrap">
+                                    <ul class="description-list">
+                                        <li>
+                                            <span class="newaddress block">
+                                    <span class="gray">- 도로명</span>서울특별시 노원구 덕릉로
+                                            </span>
+                                            <span class="oldadress block">
+                                    <span class="gray">-  지번</span>서울특별시 노원구 싱계동 1학림사
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="newaddress block">
+                                    <span class="gray">-  도로명</span>서울특별시 노원구 덕릉로
+                                            </span>
+                                            <span class="oldadress block">
+                                    <span class="gray">-  지번</span>서울특별시 노원구 싱계동 1학림사
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="newaddress block">
+                                    <span class="gray">-  도로명</span>서울특별시 노원구 덕릉로
+                                            </span>
+                                            <span class="oldadress block">
+                                    <span class="gray">-  지번</span>서울특별시 노원구 싱계동 1학림사
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--/* popup_address_search_result */-->
+    <div id="popup_add_result-wrap" class="tr popupfixed-wrap">
+        <div class="popup-dim"></div>
+        <div class="popup-vertical">
+            <div class="popup-layer option">
+
+                <div id="picksell-collection-popup-mobile">
+                    <div id="address-search-success-popup">
+                        <div class="request-wrap">
+                            <a class="btn_close" href="#"><img class="close-popup" src="./assets/images/popup/close_1.png"></a>
+                            <h2 class="title">주소 검색</h2>
+                            <form action="#" method="get">
+                                <div class="request_form">
+                                    <h3 class="title_form">도로명, 건물명, 지번에 대한 통합검색이 가능합니다.</h3>
+                                    <div class="input_wrap">
+                                        <label class="blind">주소입력</label>
+                                        <input type="text" value="서울시 노원구 상계동 165-203..." class="form-control address-input" name="address" placeholder="수거 받을 주소 입력" />
+                                        <img class="remove-img" src="./assets/images/popup/close_2.png" alt="remove-txt">
+                                    </div>
+                                    <div class="confirm auth">
+                                        <input type="submit" value="검색" class="btn auth-btn submit-btn">
+                                    </div>
+                                </div>
+                                <div class="success-set-address">
+                                    <textarea type="text" value="서울시 노원구 상계동 165-203..." class="form-control" name="address2" placeholder="상세 주소 입력"></textarea>
+                                </div>
+                                <div class="confirm half-confirm">
+                                    <input type="submit" value="취소" class="btn submit-btn cancel-btn">
+                                    <input type="submit" value="확인" class="btn submit-btn confirm-btm">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--/* popup_phone - .pop_phone */ -->
+    <div id="popup_phone-wrap" class="tr popupfixed-wrap">
+        <div class="popup-dim"></div>
+        <div class="popup-vertical">
+            <div class="popup-layer option">
+
+                <div id="picksell-collection-popup-mobile">
+                    <div class="request-wrap">
+                        <a class="btn_close" href="#"><img class="close-popup" src="./assets/images/popup/close_1.png"></a>
+                        <h2 class="title">전화번호 인증하기</h2>
+                        <form action="#" method="get">
+
+                            <div class="request_form">
+                                <h3 class="title_form">사용중인 휴대폰 번호를 입력해주세요.</h3>
+                                <div class="input_wrap">
+                                    <label class="blind">전화번호 인증</label>
+                                    <input type="text" class="form-control" name="tel" placeholder="전화번호 입력" />
+                                    <img class="remove-img" src="./assets/images/popup/close_2.png" alt="remove-txt">
+                                </div>
+                                <div class="confirm auth">
+                                    <input type="submit" value="인증번호 받기" class="btn auth-btn submit-btn">
+                                </div>
+                            </div>
+                            <div class="request_form auth_form">
+                                <div class="input_wrap">
+                                    <label class="blind">인증번호 입력</label>
+                                    <input type="text" class="form-control" name="tel" placeholder="인증번호 입력" />
+                                </div>
+                            </div>
+
+                            <div class="confirm half-confirm">
+                                <input type="submit" value="취소" class="btn submit-btn cancel-btn">
+                                <input type="submit" value="확인" class="btn submit-btn confirm-btm">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--/* popup_success */-->
+    <div id="popup_success-wrap" class="tr popupfixed-wrap">
+        <div class="popup-dim"></div>
+        <div class="popup-vertical">
+            <div class="popup-layer option">
+
+                <div id="picksell-success-popup-mobile">
+                    <div class="request-wrap success-wrap">
+                        <a class="btn_close" href="#"><img class="close-popup" src="./assets/images/popup/close_1.png"></a>
+                        <div class="description-container">
+                            <div class="success-img-wrap">
+                                <img src="./assets/images/popup/happycall_img.png">
+                            </div>
+                            <div class="description-word">
+                                수거 신청이 완료되었습니다.
+                                <span class="sub-description">
+                            방문일정을 맞추기 위해 해피콜로<br/>
+                            연락드릴 예정입니다.
+                          </span>
+                            </div>
+                        </div>
+                        <div class="confirm">
+                            <input type="submit" value="확인" class="btn submit-btn confirm-btm">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--/* popup script */-->
+    <script>
+        var layerPopupAdd = $(".pop_address").trpLayerFixedPopup("#popup_add-wrap");
+        var layerPopupAddList = $("클릭선택자").trpLayerFixedPopup("#popup_add_list-wrap");
+        var layerPopupAddResult = $("클릭선택자").trpLayerFixedPopup("#popup_add_result-wrap");
+        var layerPopupPhone = $(".pop_phone").trpLayerFixedPopup("#popup_phone-wrap");
+        var layerPopupSuccess = $("클릭선택자").trpLayerFixedPopup("#popup_success-wrap");
+
+        /* 팝업 실행 (Test 용이므로 삭제 바람) */
+        layerPopupAddResult.open(this);
+
+
+        /* popup_address */
+        $(layerPopupAdd.getBtn).on("click", function($e) {
+            $e.preventDefault();
+            layerPopupAdd.open(this); // 팝업닫칠때포커스 선택자 or false
+        });
+        $("body").on("click", "#popup_add-wrap .btn_close, #popup_add-wrap .popup-dim", function($e) {
+            $e.preventDefault();
+            layerPopupAdd.close();
+        });
+
+
+        /* popup_address_search_list */
+        $(layerPopupAddList.getBtn).on("click", function($e) {
+            $e.preventDefault();
+            layerPopupAddList.open(this); // or false
+        });
+        $("body").on("click", "#popup_add_list-wrap .btn_close, #popup_add_list-wrap .popup-dim", function($e) {
+            $e.preventDefault();
+            layerPopupAddList.close();
+        });
+
+
+        /* popup_address_search_result */
+        $(layerPopupAddResult.getBtn).on("click", function($e) {
+            $e.preventDefault();
+            layerPopupAddResult.open(this); // or false
+        });
+        $("body").on("click", "#popup_add_result-wrap .btn_close, #popup_add_result-wrap .popup-dim", function($e) {
+            $e.preventDefault();
+            layerPopupAddResult.close();
+        });
+
+
+        /* popup_phone */
+        $(layerPopupPhone.getBtn).on("click", function($e) {
+            $e.preventDefault();
+            layerPopupPhone.open(this); // or false
+        });
+        $("body").on("click", "#popup_phone-wrap .btn_close, #popup_phone-wrap .popup-dim", function($e) {
+            $e.preventDefault();
+            layerPopupPhone.close();
+        });
+
+
+        /* popup_success */
+        $(layerPopupSuccess.getBtn).on("click", function($e) {
+            $e.preventDefault();
+            layerPopupSuccess.open(this); // or false
+        });
+        $("body").on("click", "#popup_success-wrap .btn_close, #popup_success-wrap .popup-dim", function($e) {
+            $e.preventDefault();
+            layerPopupSuccess.close();
+        });
+    </script>
+    <!-- //popup -->
+</body>
+
+</html>

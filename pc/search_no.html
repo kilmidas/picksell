@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>검색</title>    
+    <link rel="stylesheet" href="./assets/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="./assets/css/common.min.css">
+    <!--[if lt IE 9]>
+        <script src="./js/library/html5shiv.js" 	type="text/javascript" charset="utf-8"></script>
+        <script src="./js/library/respond.min.js" 	type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+    <script src="./assets/js/library/jquery.min.js"></script>
+    <script src="./assets/js/library/jquerylibrary.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->  
+        <div id="header"></div>
+        <!-- //header -->  
+                
+        <!-- contents -->  
+        <div id="contents">
+            <!-- 상품 검색 -->
+            
+            <div class="search-wrap">
+                <form action="#">
+                    <button class="search"></button>
+                    <div class="search-inner">
+                        <input type="text" name="search" id="search" placeholder="상품을 검색해 주세요." title="검색">
+                    </div>
+                    <a href="javascript:void(0)" class="cancel"><span>취소</span></a>
+                </form>
+            </div>
+        
+            <!-- 카테고리 정열 -->
+            <div class="cartegory_align-wrap">
+               <div class="article-wrap">
+                <form action="#">
+                    <div class="from_s">
+                        <select id="select-sort" required class="demo-default select-sort"
+                        placeholder="선택" name="beast">
+                            <option value="1" selected="selected">최신 등록순</option>
+                            <option value="3">낮은 가격순</option>
+                            <option value="4">높은 가격순</option>
+                            <option value="5">판매완료 제외</option>
+                        </select>
+                    </div>
+                </form>
+                </div>
+            </div>
+            
+            <div class="no_result search">
+                <p>검색 결과가 없습니다.</p>
+            </div>
+            
+            
+        </div>
+        <!-- //contents -->  
+        
+        <!-- footer -->  
+        <div id="footer"></div>
+        <!-- //footer -->  
+        
+    </div>
+</body>
+</html>

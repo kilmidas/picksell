@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>작업 리스트</title>
+    <style>
+
+        html, body { -webkit-text-size-adjust:none; } /*글자자동조절방지*/
+        html, body, div, form, input, select, button, textarea, legend, fieldset, h1, h2, h3, h4, h5, h6, 
+        ul, li, ol, dl,  dt, dd, blockquote, address, p, table, th, td, caption { margin:0; padding:0; font:normal 12px/1.5 Malgun Gothic, dotum,"돋움",Arial,AppleGothic,Sans-serif; color:#333; line-height:1.5 }
+        ul, li, ol { list-style:none;  }
+        img, fieldset , video{ border:0;  vertical-align:top; }
+        input, textarea, select { vertical-align:middle; resize:none; position:relative;  /* -webkit-appearance:none; */ -webkit-border-radius:0;}	
+        button { border:0 none; background:transparent; cursor:pointer; }		
+        caption legend, .hide  { position:absolute; top:0; left:0; width:0; height:0; font-size:0; line-height:0; overflow:hidden; text-indent:-9999px; }
+        table { border-collapse:collapse; border-spacing:0; line-height:1.5}
+        table caption.tit { width:100%; height:auto; margin:20px 0; font-size:20px; font-weight:bold; text-indent:0; visibility:visible}
+        a:link, a:visited  { text-decoration:none; color:#333; }
+        a:active, a:hover, a:focus { text-decoration:underline; }		
+        /* HTML5 display-role reset for older browsers   */	
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display:block; }
+        blockquote, q { quotes:none; }
+        blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+    </style>
+    <style type="text/css">            
+        .trp.table-data-type1 { max-width:900px; margin: 0 auto; border-top: 2px solid #000; text-align:center; }
+        .trp.table-data-type1 thead th { height: 25px; padding: 4px 5px 3px 5px; border-bottom: 1px solid #d9d9d9; border-left: 1px solid #d9d9d9; font-size: 13px; background-color: #f6f6f6; }
+        .trp.table-data-type1 thead th:first-child { border-left: 0; }
+        .trp.table-data-type1 tbody th { height: 25px; padding: 4px 5px 3px 5px; border-right: 1px solid #efefef; border-bottom: 1px solid #e5e5e5; font-size: 13px; background-color: #f6f6f6; }
+        .trp.table-data-type1 tbody td { height: 25px; padding: 4px 5px 3px 5px; border-right: 1px solid #efefef; border-bottom: 1px solid #e5e5e5; font-size: 13px;}
+        .trp.table-data-type1 tbody td.tit { padding-left: 50px; text-align: left; }
+        .trp.table-data-type1 tbody td .txt-box { text-align: left; margin-left: 5px }
+        .trp.table-data-type1 tbody td .radio-box { text-align: left; margin-left: 5px }
+        .trp.table-data-type1 tbody td .txt-box { text-align: left; margin-right: 5px }
+        .trp.table-data-type1 .bd-r { border-right: 1px solid #e5e5e5; }
+        .trp.table-data-type1 .bd-l { border-left: 1px solid #e5e5e5; }
+        .trp.table-data-type1 .bd-t { border-top: 1px solid #e5e5e5; }
+        .trp.table-data-type1 .bd-b { border-bottom: 1px solid #e5e5e5; }
+        .trp.table-data-type1 .bd-rn { border-right: none; }
+        .trp.table-data-type1 .bd-ln { border-left: none; }
+        .trp.table-data-type1 .bd-tn { border-top: none; }
+        .trp.table-data-type1 .bd-bn { border-bottom: none; }
+        .psd { text-align: left;}
+        .st-x {background-color: cadetblue   }
+        .st-- {background-color: darkseagreen  }
+        .st-o {background-color: aquamarine }
+        .st-x:after { content:"X";  }
+        .st--:after { content:"~";  }
+        .st-o:after { content:"O";  }        
+    </style>
+</head>
+<body>
+<table class="trp table-data-type1" summary="픽셀 페이지 뷰">
+    <colgroup>
+        <col style="width:5%;">
+        <col style="width:35%;">
+        <col style="width:20%;">
+        <col style="width:10%;">
+        <col style="width:30%;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="col">page</th>
+            <th scope="col">PSD 이름</th>
+            <th scope="col">html 파일 링크</th>
+            <th scope="col">진행 상황(X, ~ , O)</th>
+            <th scope="col" class="bd-rn">기타(코멘트)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">0</th>
+            <td class="psd"> ui 가이드 </td>
+            <td> <a href="./_sample_ui.html" target="_blank">_sample_ui.html</a>&nbsp;</td>
+            <td class="st--"> &nbsp; </td>
+            <td class="bd-rn">-</td>
+        </tr>
+        <tr>
+            <th scope="row">1</th>
+            <td class="psd"> 01_top.psd </td>
+            <td> <a href="./main.html" target="_blank">main.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td class="psd"> 02_picksellhome.psd </td>
+            <td> <a href="./main.html" target="_blank">main.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td class="psd"> 03_picksell_menu.psd </td>
+            <td> <a href="./main.html" target="_blank">main.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td class="psd"> 04_picksell_menu_down.psd </td>
+            <td> <a href="./main.html" target="_blank">main.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">5</th>
+            <td class="psd"> 05_기본카테고리화면.psd </td>
+            <td>
+                <a href="./category.html" target="_blank">category.html</a></td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td class="psd"> 06_기본카테고리화면_menu.psd </td>
+            <td>
+                <a href="./category.html" target="_blank">category.html</a></td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">7</th>
+            <td class="psd"> 07_기본카테고리화면_menu_2줄.psd </td>
+            <td>
+                <a href="./category.html" target="_blank">category.html</a></td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">8</th>
+            <td class="psd"> 08_시스템_카테고리화면.psd </td>
+            <td>
+                <a href="./system_category.html" target="_blank">system_category.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">9</th>
+            <td class="psd"> 09_결제하기.psd </td>
+            <td>
+                <a href="./payment.html" target="_blank">payment.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">10</th>
+            <td class="psd"> 10_방문수거 관리목록.psd </td>
+            <td>
+                <a href="./pickup_list.html" target="_blank">pickup_list.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">11</th>
+            <td class="psd"> 11_내정보변경.psd </td>
+            <td>
+                <a href="./my_info.html" target="_blank">my_info.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>  
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">12</th>
+            <td class="psd"> 12_구매목록.psd </td>
+            <td><a href="./purchase_list.html" target="_blank">purchase_list.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">13</th>
+            <td class="psd"> 13_장바구니.psd </td>
+            <td>
+                <a href="./basket.html" target="_blank">basket.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">14</th>
+            <td class="psd"> 14_검색.psd </td>
+            <td>
+                <a href="./search.html" target="_blank">search.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">15</th>
+            <td class="psd"> 15_배송조회.psd </td>
+            <td>
+                <a href="./delivery_check.html" target="_blank">delivery_check.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">16</th>
+            <td class="psd"> 16_상품상세화면.psd </td>
+            <td>
+                <a href="./detail_view.html" target="_blank">detail_view.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">17</th>
+            <td class="psd"> 17_상품상세화면_상품설명.psd </td>
+            <td>
+                <a href="./detail_view.html" target="_blank">detail_view.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">18</th>
+            <td class="psd"> 18_상품상세화면_타이틀 2줄일때.psd </td>
+            <td>
+                <a href="./detail_view.html" target="_blank">detail_view.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">19</th>
+            <td class="psd"> 19_상품상세화면_상품문의.psd </td>
+            <td>
+                <a href="./detail_view.html" target="_blank">detail_view.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">20</th>
+            <td class="psd"> 20_상품상세화면_상품문의확장.psd </td>
+            <td>
+                <a href="./detail_view.html" target="_blank">detail_view.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">dj</td>
+        </tr>
+        <tr>
+            <th scope="row">21</th>
+            <td class="psd"> 21_로그인.psd </td>
+            <td><a href="./login.html" target="_blank">login.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">22</th>
+            <td class="psd"> 22_이메일로 로그인.psd </td>
+            <td><a href="./login_email.html" target="_blank">login_email.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">23</th>
+            <td class="psd"> 23_비밀번호 찾기.psd </td>
+            <td><a href="./password_find.html" target="_blank">password_find.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">24</th>
+            <td class="psd"> 24_알림.psd </td>
+            <td><a href="./notice.html" target="_blank">notice.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">25</th>
+            <td class="psd"><s> 25_이벤트레이어.psd(총 2개)</s> (메인페이지 포함됨) </td>
+            <td>
+                <a href="./event.html" target="_blank"><s>event.html</s></a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">26</th>
+            <td class="psd"> 26_기본팝업.psd(총 8개) </td>
+            <td>
+                <a href="./popup.html" target="_blank">popup.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">27</th>
+            <td class="psd"> 27_레터.psd </td>
+            <td>
+                <a href="./letter.html" target="_blank">letter.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">28</th>
+            <td class="psd"> 28_레터쓰기.psd </td>
+            <td>
+                <a href="./letter_write.html" target="_blank">letter_write.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">29</th>
+            <td class="psd"> 29_전화번호인증.psd </td>
+            <td>
+                <a href="./popup_form_3.html" target="_blank">popup_form.html(확인용)</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">30</th>
+            <td class="psd"> 30_주소검색.psd </td>
+            <td>
+                <a href="./popup_form.html" target="_blank">popup_form.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">31</th>
+            <td class="psd"> 31_주소검색_결과.psd </td>
+            <td>
+                <a href="./popup_form_1.html" target="_blank">popup_form.html(확인용)</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">32</th>
+            <td class="psd"> 32_주소검색_상세주소입력.psd </td>
+            <td>
+                <a href="./popup_form_2.html" target="_blank">popup_form.html(확인용)</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>                  
+        <tr>
+            <th scope="row">33</th>
+            <td class="psd"> 33_수거완료.psd </td>
+            <td>
+                <a href="./popup_form_4.html" target="_blank">popup_form.html(확인용)</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">34</th>
+            <td class="psd"> 친구추가하기.psd </td>
+            <td>
+                <a href="./friend_code.html" target="_blank">friend_code.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">35</th>
+            <td class="psd"> 선택할 쿠폰 </td>
+            <td>
+                <a href="./coupon_select.html" target="_blank">coupon_select.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">36</th>
+            <td class="psd"> 내 쿠폰 </td>
+            <td>
+                <a href="./coupon_my.html" target="_blank">coupon_my.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>
+        <tr>
+            <th scope="row">37</th>
+            <td class="psd"> 쿠폰모음 </td>
+            <td>
+                <a href="./coupon_down.html" target="_blank">coupon_down.html</a>&nbsp;</td>
+            <td class="st-o"> &nbsp; </td>
+            <td class="bd-rn">sh</td>
+        </tr>        
+        <tr>
+            <th scope="row">-</th>
+            <td colspan="4" class="bd-rn"> - </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
+

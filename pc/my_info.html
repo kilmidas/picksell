@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>내정보 변경</title>    
+    <link rel="stylesheet" href="./assets/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="./assets/css/common.min.css">
+    <!--[if lt IE 9]>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="./assets/js/library/jquery.min.js"></script>
+    <script src="./assets/js/library/jquerylibrary.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>
+</head>
+<body>
+<div id="wrap" class="wrap">
+   
+<!-- header -->  
+<div id="header"></div>
+<!-- //header -->  
+
+
+<!-- contents -->            
+<div id="contents">
+    <div class="article-wrap mb40">
+        
+        <div class="my_photo">
+            <h2 class="blind">내 사진 변경</h2>
+            <a href="#"><img src="./assets/images/products/pro114_114.jpg" alt="my_photo"></a>
+        </div>
+        
+        <span class="h_border_pos"></span>
+        
+        <form action="#" method="get">
+            <fieldset>
+                <legend class="blind">주문/배송정보 입력 폼</legend>
+                
+                <h2>내정보 변경</h2>
+                <div class="from_l my_info mb40">
+                    <label for="name"><strong>이름</strong></label> 
+                    <input id="name" type="text" name="name" placeholder="이름을 입력해주세요.">
+                    <label for="nickname"><strong>닉네임</strong></label> 
+                    <input id="nickname" type="text" name="nickname" placeholder="닉네임을 입력해주세요.">  
+                </div>
+            
+                <span class="h_border_pos"></span>
+
+                <h2>배송정보 변경</h2>
+                <div class="from_l my_info mb40">
+                    <label for="tel"><strong>휴대번호</strong></label> 
+                    <input id="tel" type="text" name="tel" placeholder="전화번호를 입력해주세요.">
+                    <label for="address"><strong>주소</strong></label> 
+                    <input id="address" type="text" name="address" placeholder="주소를 입력해주세요.">
+                    <label for="address_more"><strong>상세주소</strong></label> 
+                    <input id="address_more" type="text" name="address_more" placeholder="상세주소를 입력해주세요.">   
+                </div>
+            </fieldset>
+        </form>  
+
+        <button class="btn def">저장하기</button> 
+    </div>
+       
+</div>
+<!-- //contents -->  
+
+
+<!-- footer -->  
+<div id="footer"></div>
+<!-- //footer -->  
+    
+</div>
+   
+</body>
+</html>

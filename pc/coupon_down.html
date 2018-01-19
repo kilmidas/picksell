@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>쿠폰모음</title>    
+    <link rel="stylesheet" href="./assets/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="./assets/css/common.min.css">
+    <!--[if lt IE 9]>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="./assets/js/library/jquery.min.js"></script>
+    <script src="./assets/js/library/jquerylibrary.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>
+</head>
+<body>
+<div id="wrap" class="wrap">
+   
+<!-- header -->  
+<div id="header"></div>
+<!-- //header -->  
+
+
+<!-- contents -->            
+<div id="contents">
+    <div class="article-wrap"><h2>쿠폰모음</h2></div>
+    <div class="coupon down">
+        <ul class="coupon-list">
+            <li>
+                <img src="./assets/images/coupon/01_coupon.jpg" alt="">
+                <!-- [D] 확장 시 'open' 클래스 추가, 닫기 시 클래스 삭제  바람 -->
+                <div class="date">
+                    <p>30개 남았어요 서두르세요!</p>
+                    <div class="btn-box">
+                        <a href="#">쿠폰받기</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/coupon/02_coupon.jpg" alt="">
+                <!-- [D] 확장 시 'open' 클래스 추가, 닫기 시 클래스 삭제  바람 -->
+                <div class="date">
+                    <p>지금 다운받고 혜택 받으세요.</p>
+                    <div class="btn-box">
+                        <a href="#">쿠폰받기</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <img src="./assets/images/coupon/01_coupon.jpg" alt="">
+                <!-- [D] 확장 시 'open' 클래스 추가, 닫기 시 클래스 삭제  바람 -->
+                <div class="date">
+                    <p class="add">지금 다운받고 혜택 받으세요.</p>
+                    <p>*5만원 이상 구매시</p>
+                    <p>*30%할인 최대 금액 30만원</p>
+                    <div class="btn-box">
+                        <a href="#">쿠폰받기</a>
+                    </div>
+                </div>
+            </li>      
+            <li>
+                <img src="./assets/images/coupon/01_coupon.jpg" alt="">
+                <!-- [D] 확장 시 'open' 클래스 추가, 닫기 시 클래스 삭제  바람 -->
+                <div class="date open">
+                    <p class="add">지금 다운받고 혜택 받으세요.</p>
+                    <p>*5만원 이상 구매시</p>
+                    <p>*30%할인 최대 금액 30만원</p>
+                    <div class="btn-box">
+                        <a href="#">쿠폰받기</a>
+                    </div>
+                </div>
+            </li>                               
+        </ul>
+        <script>
+            $(".date").on("click", function($e){                   
+                $e.preventDefault();       
+                $(this).toggleClass('open');
+            });                 
+        </script>
+    </div>
+        
+        
+       
+</div>
+<!-- //contents -->  
+
+
+<!-- footer -->  
+<div id="footer"></div>
+<!-- //footer -->  
+    
+</div>
+   
+</body>
+</html>

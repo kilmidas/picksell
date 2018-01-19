@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>결제하기</title>    
+    <link rel="stylesheet" href="./assets/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="./assets/css/common.min.css">
+    <!--[if lt IE 9]>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="./assets/js/library/jquery.min.js"></script>
+    <script src="./assets/js/library/jquerylibrary.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>
+</head>
+<body>
+<div id="wrap" class="wrap">
+   
+<!-- header -->  
+<div id="header"></div>
+<!-- //header -->  
+
+
+<!-- contents -->            
+<div id="contents">
+    <div class="article-wrap mb40">
+        <h2>주문/배송정보</h2>
+
+        <form action="#" method="get">
+            <fieldset>
+                <legend class="blind">주문/배송정보 입력 폼</legend>
+                <div class="from_l payment">
+                    <label for="name"><strong>이름</strong></label> 
+                    <input id="name" type="text" name="name" placeholder="이름을 입력해주세요.">
+                    <label for="tel"><strong>휴대번호</strong></label> 
+                    <input id="tel" type="text" name="tel" placeholder="전화번호를 입력해주세요.">
+                    <label for="address"><strong>주소</strong></label> 
+                    <input id="address" type="text" name="address" placeholder="주소를 입력해주세요.">
+                    <label for="address_more"><strong>상세주소</strong></label> 
+                    <input id="address_more" type="text" name="address_more" placeholder="상세주소를 입력해주세요.">   
+                </div>
+            </fieldset>
+        </form>   
+    </div>
+    
+    <div class="article-wrap h_border mb40">  
+        <h2>상품리스트</h2>
+        <!-- line-list buy -->
+        <ul class="line-list payment">
+            <li>
+                <div class="item">
+                    <img class="ui avatar image" src="./assets/images/products/pro134_134.jpg" alt="상품">
+                    <div class="desc">
+                        <a href="#" >
+                            <span class="tit">케이즈키즈 뉴 헝겁자극 애벌레케이케이 케이즈키즈 뉴 헝겁자극 애벌레케이케이</span>
+                            <span class="price"><em>9,000</em>원</span>
+                            <span class="code">상품번호 <em>12.356</em></span>
+                        </a>
+                    </div>
+                </div>  
+            </li>
+            <li>
+                <div class="item">
+                    <img class="ui avatar image" src="./assets/images/products/pro134_134.jpg"  alt="상품">
+                    <div class="desc">
+                        <a href="#" >
+                            <span class="tit">케이즈키즈 뉴 헝겁자극 애벌레케이케이 케이즈키즈 뉴 헝겁자극 애벌레케이케즈키즈 즈키즈 이</span>
+                            <span class="price"><em>9,000</em>원</span>
+                            <span class="code">상품번호 <em>12.356</em></span>
+                        </a>
+                    </div>
+                </div>  
+            </li>
+            <li>
+                <div class="item">
+                    <img class="ui avatar image" src="./assets/images/products/pro134_134.jpg"  alt="상품">
+                    <div class="desc">
+                        <a href="#" >
+                            <span class="tit">케이즈키즈 뉴 헝겁자극 애벌레케이케이 케이즈키즈 뉴 헝겁자극 애벌레케이케이</span>
+                            <span class="price"><em>9,000</em>원</span>
+                            <span class="code">상품번호 <em>12.356</em></span>
+                        </a>
+                    </div>
+                </div>  
+            </li>
+        </ul>
+        <!-- //line-list buy -->
+            
+    </div>
+    
+    <div class="article-wrap h_border">
+        <h2>결제정보</h2>
+        
+        <ul class="item payment">
+            <li class="list">
+                <p class="title">상품합계</p>
+                <div class="txt pos_right"><em class="b">18,000원</em></div>
+            </li>
+            <li class="list">
+                <p class="title">배송비</p>
+                <div class="txt pos_right"><em class="b">+2,500원</em></div>
+            </li>
+            <li class="list mb10">
+                <p class="title">할인쿠폰</p>
+                <div class="from_l">
+                    <a href="#1">
+                        <input class="txt pos_right" type="text" name="point" placeholder="30%">
+                    </a>
+                </div>
+            </li>            
+            <li class="list">
+                <p class="title"><em>55,000</em> 포인트 보유중</p>
+                <div class="from_l">
+                    <input class="txt pos_right" type="text" name="point" placeholder="사용할 포인트를 입력">
+                </div>
+            </li>
+            <li class="list total">
+                <p class="title">총 결제 금액</p>
+                <div class="txt pos_right"><em class="b">20,500원</em></div>
+            </li>
+        </ul>   
+    </div>
+    
+    
+    <div class="article-wrap h_border mb10">
+        <h2>결제방법 선택</h2>
+        
+        <ul class="item payment mb10">
+            <li class="list">
+                <label for="card" class="title"><strong>신용카드</strong></label> 
+                <div class="from_g pos_right"><input type="radio" name="payment" id="card"></div>
+            </li>
+            <li class="list">
+                <label for="transfer" class="title"><strong>계좌이체</strong></label> 
+                <div class="from_g pos_right"><input type="radio" name="payment" id="transfer"></div>
+            </li>
+        </ul>   
+        
+        <button class="btn def"><em>20,500</em>원 결제하기</button>
+        
+    </div>
+        
+    
+</div>
+<!-- //contents -->  
+
+
+<!-- footer -->  
+<div id="footer"></div>
+<!-- //footer -->  
+
+</div>
+   
+</body>
+</html>

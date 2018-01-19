@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>sample</title>    
+    <link rel="stylesheet" href="./assets/css/library/csslibrary.min.css">
+    <link rel="stylesheet" href="./assets/css/common.min.css">
+    <!--[if lt IE 9]>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="./assets/js/library/jquery.min.js"></script>
+    <script src="./assets/js/library/jquerylibrary.min.js"></script>
+    <script src="./assets/js/common.min.js"></script>
+    <style>
+        
+        section { clear: both;  margin-bottom: 50px;  }
+        section > div { margin-bottom: 20px;}
+        h2 {margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div id="wrap" class="wrap">
+        <!-- header -->  
+        <div id="header"></div>
+        <!-- //header -->  
+                
+        <!-- contents -->  
+        <div id="contents">
+            <section>
+                <h2>from</h2>
+                
+                <div class="col-pr-50">
+                    <h3>input checkbox</h3>
+                    <div class="from_g">
+                        <input type="checkbox" name="pay">
+                    </div>
+                    <div class="from_g">
+                        <input type="checkbox" name="pay">
+                    </div>    
+                </div>
+                
+                <div class="col-pr-50">                
+                    <h3 class="">input radio</h3>
+                    <div class="from_g">
+                        <input type="radio" name="paymo">
+                    </div>
+                    <div class="from_g">
+                        <input type="radio" name="paymo">
+                    </div>
+                </div>
+                
+                <script>
+                    // common.js
+                </script>
+                
+                
+                
+                <div class="col-pr-50">                
+                    <h3>input text</h3>
+                    <div class="from_l">
+                        <input type="text" name="paymo" placeholder="입력"> 
+                    </div>
+                </div>
+                 
+                <div class="col-pr-50">                
+                    <h3>select js</h3>
+                    <form action="#">
+                    <div class="from_l">
+                        <select id="select-beast" required class="demo-default select-acbox"
+                        placeholder="선택" name="beast">
+                            <option value=""> kdlfklasdkfSelect a person...</option>
+                            <option value="1">kdlfklasdkfNikola</option>
+                            <option value="3">kdlfklasdkfNikola Tesla</option>
+                            <option value="4">kdlfklasdkfThomas Edison</option>
+                            <option value="5">kdlfklasdkfArnold Schwarzenegger</option>
+                        </select>
+                    </div>
+                    </form>
+                    <script>
+                       // common.js
+                    </script>
+                </div>
+                
+                <div class="col-pr-50">                
+                    <h3>select - sort</h3>
+                    
+                    <form action="#">
+                    <div class="from_s">
+                        <select id="select-sort" required class="demo-default select-sort"
+                        placeholder="선택" name="beast">
+                            <option value="1" selected="selected">최신 등록순</option>
+                            <option value="3">낮은 가격순</option>
+                            <option value="4">높은 가격순</option>
+                            <option value="5">판매완료 제외</option>
+                        </select>
+                    </div>
+                    </form>
+                    <!--http://cheolguso.com/preview/select/select.html-->
+                </div>
+                
+                <div class="col-pr-50">                
+                    <h3>search </h3>
+                    
+                    <form action="#">
+                    <div class="search-wrap">
+                        <button class="search"></button>
+                        <div class="search-inner">
+                            <input type="text" name="search" id="search" placeholder="상품을 검색해 주세요." title="검색">
+                        </div>
+                        <a href="javascript:void(0)" class="cancel"><span>취소</span></a>
+                    </div>
+                    </form>
+                    <!--http://cheolguso.com/preview/select/select.html-->
+                </div>
+
+            </section>
+            
+            <section>
+                <h2>button</h2>
+                <div>
+                   <h3>버튼</h3>
+                    <button class="btn def">버튼</button>
+                    <label for=""></label><input class="btn def hover" value="버튼" type="button" />
+                    <a href="#" class="btn def acitve" href="#" >버튼</a> 
+                    
+                    <button class="btn def w">버튼</button>
+                    <label for=""></label><input class="btn def w hover" value="버튼" type="button" />
+                    <a href="#" class="btn def w acitve" href="#" >버튼</a> 
+                    
+                </div>
+                
+                <div class="btn-ac">
+                   <h3>아이콘 버튼</h3>
+                    <a href="#" class="dropdown"></a>
+                    <a href="#" class="dropdown on"></a>
+                </div>
+                
+                <div class="tabs">
+                   <h3>아이콘 버튼</h3>
+                    <a href="#" class="btn btn1"></a>
+                    <a href="#" class="btn btn1 on"></a>
+                    <a href="#" class="btn btn2"></a>
+                    <a href="#" class="btn btn2 on"></a>
+                    <a href="#" class="btn btn3"></a>
+                    <a href="#" class="btn btn3 on"></a>
+                </div>
+                
+                <div>
+                    <a href="#" class="save-btn"></a>
+                </div>
+            </section>
+            
+         
+            <section>
+                <h2>list</h2>
+                <div class="article-wrap">
+                    <h3>line-list</h3>
+                    <ul class="line-list">
+                        <li>
+                            <div class="item">
+                                <img class="image" src="./assets/images/products/pro134_134.jpg">
+                                <div class="desc">
+                                    <a href="#" >
+                                        <span class="tit">케이즈키즈 뉴 헝겁자극 애벌레케이케이 케이즈키즈 뉴 헝겁자극 애벌레케이케이</span>
+                                        <span class="price"><em>9,000</em>원</span>
+                                        <span class="code">상품번호 <em>12.356</em></span>
+                                  </a>
+                                </div>
+                            </div>  
+                        </li>
+                    </ul>
+                    
+                    <!--   -->
+                    <ul class="line-list buy">
+                        <li>
+                            <div class="item">
+                                <img class="image" src="./assets/images/products/pro134_134.jpg">
+                                <div class="desc">
+                                    <a href="#" >
+                                        <span class="tit">케이즈키즈 뉴 헝겁자극 애벌레케이케이 케이즈키즈 뉴 헝겁자극 애벌레케이케이</span>
+                                        <span class="notice">상품이 <em class="b">구매</em> 되었습니다.</span>
+                                        <span class="price"><em>9,000</em>원</span>
+                                        <span class="code">상품번호 <em>12.356</em></span>
+                                    </a>
+                                    <div class="btn-box">
+                                        <a href="#">구매취소</a>
+                                    </div>
+                                </div>
+                            </div>  
+                        </li>
+                        <li>
+                            <div class="item">
+                                <img class="image" src="./assets/images/products/pro134_134.jpg">
+                                <div class="desc">
+                                    <a href="#" >
+                                        <span class="tit">케이즈키즈 뉴 헝겁자극 애벌레케이케이 케이즈키즈 뉴 헝겁자극 애벌레케이케이</span>
+                                        <span class="notice">상품이 <em class="b">배송</em> 되었습니다.</span>
+                                        <span class="price"><em>9,000</em>원</span>
+                                        <span class="code">상품번호 <em>12.356</em></span>
+                                    </a>
+                                    <div class="btn-box">
+                                        <a href="#">배송조회</a>
+                                    </div>
+                                </div>
+                            </div>  
+                        </li>
+                        <li>
+                            <div class="item">
+                                <img class="image" src="./assets/images/products/pro134_134.jpg">
+                                <div class="desc">
+                                    <a href="#" >
+                                        <span class="tit">케이즈키즈 뉴 헝겁자극 애벌레케이케이 케이즈키즈 뉴 헝겁자극 애벌레케이케이</span>
+                                        <span class="notice">상품이 <em class="r">구매취소</em> 되었습니다.</span>
+                                        <span class="price"><em>9,000</em>원</span>
+                                        <span class="code">상품번호 <em>12.356</em></span>
+                                    </a>
+                                    <div class="btn-box">
+                                        
+                                    </div>
+                                </div>
+                            </div>  
+                        </li>
+                        <li>
+                            <div class="item">
+                                <img class="image" src="./assets/images/products/pro134_134.jpg">
+                                <div class="desc">
+                                    <a href="#" >
+                                        <span class="tit">케이즈키즈 뉴 헝겁자극 애벌레케이케이 케이즈키즈 뉴 헝겁자극 애벌레케이케이</span>
+                                        <span class="notice">상품이 <em class="b">배송완료</em> 되었습니다.</span>
+                                        <span class="price"><em>9,000</em>원</span>
+                                        <span class="code">상품번호 <em>12.356</em></span>
+                                    </a>
+                                    <div class="btn-box">
+                                        <a href="#">배송조회</a>
+                                    </div>
+                                </div>
+                            </div>  
+                        </li>
+                    </ul>
+                    
+                    <h3>card-list</h3>
+                    <ul class="card-list">
+                        <li>
+                            <div class="item">
+                                <a href="#" >
+                                    <img class="image" src="./assets/images/products/pro296_296.jpg">
+                                    <span class="desc">
+                                        <span class="tit"></span>
+                                        <span class="price">
+                                            <span><em></em></span>
+                                        </span>
+                                    </span>
+                                    <span class="unused">미사용</span>
+                                    <span class="soldout"><img src="./assets/images/products/pro296_296-soldout.png" alt="sold out"></span>
+                                </a>
+                            </div>  
+                        </li>
+                        <li>
+                            <div class="item">
+                                <a href="#" >
+                                    <img class="image" src="./assets/images/products/pro296_296.jpg">
+                                    <span class="desc">
+                                        <span class="tit">케이즈키즈 뉴 헝겁자극 애벌레케이케이 케이즈키즈 뉴 헝겁자극 애벌레케이케이</span>
+                                        <span class="price">
+                                            <span class="del"><em>18,000</em>원</span>
+                                            <span class="sale"><em>9,000</em>원</span>
+                                        </span>
+                                    </span>
+                                    <span class="unopened">미개봉</span>
+                                    <span class="discount"><em>9000</em>원 더할인</span> 
+                                    <span class="basket"><i><span class="blind">장바구니</span></i><em>3</em></span> 
+                                </a>
+                            </div>  
+                        </li>
+                    </ul>
+                    
+                    
+                </div> 
+                 
+            </section>
+            
+            
+            <section>
+                <h2>머니</h2>
+                
+            </section>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+        <!-- //contents -->  
+        
+        <!-- footer -->  
+        <div id="footer"></div>
+        <!-- //footer -->  
+        
+    </div>
+</body>
+</html>
+
+
+
